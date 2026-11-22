@@ -1,0 +1,608 @@
+/* ============================================================
+   مدارج — أنماط الرحلة (نقل بنية LOSHA المرجعية بلوحة الورق)
+   طوران: ليل الغرفة (نصوص كريمية) وعالم الورق (نصوص حبرية)
+   ============================================================ */
+.jr {
+  --jcoral: #dc8065;
+  --jcoral2: #a9533e;
+  --jink: #37442b;
+  --jink2: #46523a;
+  --jolive: #5e7047;
+  --jsage: #a8b08d;
+  --jcream: #f5f2e8;
+  --jpaper: #fcfaf4;
+  --jnight: #1a2113;
+  --jblack: #121810;
+  --jgut: clamp(16px, 3.2vw, 40px);
+  --jfg: var(--jink);
+  --jfg-dim: rgba(55, 68, 43, 0.62);
+  color-scheme: light;
+}
+
+body.jr-on {
+  overflow-x: hidden;
+  background: var(--jcream);
+}
+
+.jr * {
+  box-sizing: border-box;
+}
+
+/* السكة: الموقع كله مسار تمرير طويل فوق مسرح مثبت */
+.jr #jr-track {
+  position: relative;
+  height: 2800vh;
+}
+
+.jr #jr-stage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.jr #jr-gl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  outline: none;
+  touch-action: pan-y;
+}
+
+/* طبقات المشهد — تتحرك في الفضاء بمنظور، يحركها خط GSAP */
+.jr #jr-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  perspective: 1100px;
+  perspective-origin: 50% 45%;
+}
+
+.jr .ov {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.jr .ov * {
+  transform-style: preserve-3d;
+}
+
+/* البطل — حبر على عالم الورق الفاتح */
+.jr .jr-hero {
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 var(--jgut);
+}
+
+.jr .jr-hero h1,
+.jr .jr-hero p {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.jr .jr-hero h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(40px, 7.6vw, 104px);
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--jink);
+  text-shadow:
+    0 2px 10px rgba(245, 242, 232, 0.92),
+    0 6px 32px rgba(245, 242, 232, 0.95),
+    0 12px 70px rgba(245, 242, 232, 0.9);
+}
+
+.jr .jr-hero-accent {
+  color: var(--jcoral2);
+}
+
+.jr .jr-hero p {
+  margin: 0.8em 0 0;
+  font-size: clamp(17px, 2.1vw, 26px);
+  line-height: 1.9;
+  color: var(--jink2);
+  text-shadow:
+    0 2px 8px rgba(245, 242, 232, 0.95),
+    0 6px 26px rgba(245, 242, 232, 0.9);
+}
+
+/* بطاقة الفكرة — ورقة بحافة دافئة */
+.jr #ovAbout {
+  top: 50%;
+  right: clamp(16px, 7vw, 110px);
+  width: min(520px, calc(100% - 32px));
+  margin-top: -150px;
+  padding: clamp(28px, 3.4vw, 46px);
+  border-radius: 30px;
+  border: 1.5px solid rgba(168, 176, 141, 0.8);
+  background: linear-gradient(135deg, rgba(252, 250, 244, 0.94), rgba(245, 242, 232, 0.92) 50%, rgba(237, 232, 218, 0.94));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 30px 90px rgba(55, 68, 43, 0.22);
+}
+
+.jr #ovAbout::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 22%;
+  right: 22%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--jcoral), transparent);
+}
+
+.jr #ovAbout h2 {
+  margin: 0 0 0.5em;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 3.8vw, 52px);
+  font-weight: 700;
+  color: var(--jink);
+}
+
+.jr #ovAbout p {
+  margin: 0;
+  font-size: clamp(16px, 1.5vw, 21px);
+  line-height: 2.05;
+  color: var(--jink2);
+}
+
+/* عناوين المقاطع — شريط زجاجي ورقي */
+.jr .ttl {
+  left: 0;
+  right: 0;
+  top: clamp(84px, 13vh, 130px);
+  text-align: center;
+  padding: 0 var(--jgut);
+}
+
+.jr .pill {
+  display: inline-block;
+  padding: 0.5em 1.6em;
+  border-radius: 999px;
+  border: 1.5px solid rgba(168, 176, 141, 0.9);
+  background: linear-gradient(135deg, rgba(252, 250, 244, 0.85), rgba(245, 242, 232, 0.8));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-weight: 700;
+  font-size: clamp(18px, 2.1vw, 26px);
+  box-shadow: 0 14px 40px rgba(55, 68, 43, 0.18);
+  color: var(--jink);
+}
+
+.jr .grad {
+  background: linear-gradient(90deg, var(--jcoral2) 20%, var(--jcoral) 75%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.jr #ovArabic h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 66px);
+  font-weight: 700;
+  color: var(--jink);
+  text-shadow:
+    0 2px 10px rgba(245, 242, 232, 0.92),
+    0 6px 30px rgba(245, 242, 232, 0.95),
+    0 12px 64px rgba(245, 242, 232, 0.88);
+}
+
+.jr #ovArabic h2 span {
+  background: linear-gradient(90deg, var(--jcoral), var(--jcoral2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* الختام */
+.jr #ovFinal {
+  left: 0;
+  right: 0;
+  top: 54%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 var(--jgut);
+}
+
+.jr #ovFinal > * {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.jr #ovFinal h2 {
+  margin: 0;
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4.6vw, 62px);
+  line-height: 1.12;
+  max-width: 14em;
+  color: var(--jink);
+  text-shadow:
+    0 2px 10px rgba(245, 242, 232, 0.92),
+    0 6px 30px rgba(245, 242, 232, 0.95),
+    0 12px 64px rgba(245, 242, 232, 0.88);
+}
+
+.jr .final-actions {
+  margin-top: clamp(24px, 4.2vh, 44px);
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.jr #jr-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 32px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, var(--jcoral), var(--jcoral2));
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  font-size: clamp(16px, 1.6vw, 20px);
+  cursor: pointer;
+  box-shadow: 0 14px 44px rgba(220, 128, 101, 0.45);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.jr #jr-cta svg {
+  width: 16px;
+  height: 16px;
+  transform: scaleX(-1); /* سهم يشير لليسار في RTL */
+  transition: transform 0.35s ease;
+}
+
+.jr #jr-cta:hover,
+.jr #jr-cta:focus-visible {
+  box-shadow: 0 18px 60px rgba(220, 128, 101, 0.6);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.jr #jr-cta:hover svg {
+  transform: scaleX(-1) translate(3px, -3px);
+}
+
+.jr #jr-cta2 {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 28px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(94, 112, 71, 0.55);
+  background: rgba(252, 250, 244, 0.7);
+  color: var(--jink2);
+  font: inherit;
+  font-weight: 500;
+  font-size: clamp(15px, 1.4vw, 18px);
+  cursor: pointer;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.jr #jr-cta2:hover,
+.jr #jr-cta2:focus-visible {
+  border-color: var(--jolive);
+  background: rgba(252, 250, 244, 0.95);
+  outline: none;
+}
+
+.jr #ovFinal small {
+  margin-top: 22px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--jfg-dim);
+}
+
+/* ---------- إطار الواجهة الثابت ---------- */
+.jr .ui {
+  position: fixed;
+  z-index: 6;
+  pointer-events: none;
+  color: var(--jfg);
+}
+
+.jr.night .ui {
+  color: var(--jcream);
+}
+
+.jr.night .ui .brandword,
+.jr.night .ui .year,
+.jr.night .ui .counter,
+.jr.night .ui .jr-brandword {
+  color: rgba(245, 242, 232, 0.72);
+}
+
+.jr.night .ui .counter b,
+.jr.night .ui .jr-brandword {
+  color: var(--jcream);
+}
+
+.jr .top {
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(var(--jgut) + env(safe-area-inset-top)) var(--jgut) 0;
+}
+
+.jr .jr-brandword {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(20px, 2.4vw, 28px);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.jr .jr-brandword i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--jcoral);
+  display: inline-block;
+}
+
+.jr .year {
+  font-size: 13px;
+  letter-spacing: 0.28em;
+}
+
+.jr .bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 var(--jgut) calc(var(--jgut) + env(safe-area-inset-bottom));
+}
+
+.jr .brandword {
+  font-size: 12px;
+  letter-spacing: 0.42em;
+  direction: ltr;
+}
+
+.jr .counter {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  direction: ltr;
+  font-variant-numeric: tabular-nums;
+}
+
+.jr .counter b {
+  color: var(--jink);
+  font-weight: 700;
+}
+
+/* سكة المراحل على يسار الشاشة */
+.jr .rail {
+  left: var(--jgut);
+  top: 50%;
+  transform: translateY(-50%);
+  height: min(46vh, 340px);
+  width: 14px;
+  pointer-events: auto;
+}
+
+.jr .rail .line {
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(55, 68, 43, 0.18);
+}
+
+.jr.night .ui .rail .line {
+  background: rgba(245, 242, 232, 0.14);
+}
+
+.jr .rail .fill {
+  position: absolute;
+  left: 6px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: var(--jcoral);
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+.jr .rail button {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  margin-top: -6.5px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.jr .rail button::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(55, 68, 43, 0.35);
+  transition: all 0.35s ease;
+}
+
+.jr.night .ui .rail button::after {
+  background: rgba(245, 242, 232, 0.35);
+}
+
+.jr .rail button.on::after {
+  width: 9px;
+  height: 9px;
+  background: var(--jcoral);
+  box-shadow: 0 0 0 4px rgba(220, 128, 101, 0.22);
+}
+
+.jr .rail button:focus-visible {
+  outline: 1.5px solid var(--jcoral);
+  outline-offset: 2px;
+}
+
+/* تلميح التمرير */
+.jr .hint {
+  left: 0;
+  right: 0;
+  bottom: clamp(70px, 11vh, 120px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.jr .hint i {
+  width: 1px;
+  height: 42px;
+  background: linear-gradient(var(--jcoral), transparent);
+  transform-origin: top;
+  animation: jr-hint 2.4s ease-in-out infinite;
+}
+
+@keyframes jr-hint {
+  0% {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  60% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 0;
+  }
+}
+
+/* ---------- المحمل ---------- */
+.jr #jr-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #222b18, #121810);
+  transition: opacity 0.9s ease, visibility 0.9s;
+}
+
+.jr #jr-loader.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.jr .jr-loader-word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 44px;
+  color: var(--jcream);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  opacity: 0.9;
+  animation: jr-breathe 1.8s ease-in-out infinite;
+}
+
+.jr .jr-loader-word i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--jcoral);
+}
+
+@keyframes jr-breathe {
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* ---------- بديل نصي ---------- */
+.jr .sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- بلا WebGL ---------- */
+.no-gl .jr #jr-track {
+  height: auto;
+}
+
+.no-gl .jr #jr-stage {
+  height: 100vh;
+  background: linear-gradient(135deg, #222b18, #121810);
+}
+
+.no-gl .jr #jr-gl,
+.no-gl .jr .ov:not(#ovFinal),
+.no-gl .jr .hint {
+  display: none;
+}
+
+.no-gl .jr #ovFinal,
+.no-gl .jr #ovFinal > * {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  top: 40%;
+}
+
+.no-gl .jr #jr-loader {
+  display: none;
+}
+
+/* ---------- الجوال ---------- */
+@media (max-width: 820px) {
+  .jr #ovAbout {
+    top: auto;
+    bottom: clamp(70px, 10vh, 110px);
+    right: auto;
+    left: 50%;
+    margin: 0 0 0 calc(-1 * min(260px, 50% - 16px));
+    width: min(520px, calc(100% - 32px));
+    transform-origin: 50% 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .jr .rail {
+    display: none;
+  }
+  .jr #ovAbout {
+    right: 16px;
+    left: 16px;
+    width: auto;
+    margin: 0;
+  }
+  .jr #ovFinal {
+    top: 52%;
+  }
+}

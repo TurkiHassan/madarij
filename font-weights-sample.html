@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>عينة أوزان ثمانية — مدارج</title>
+<style>
+@font-face { font-family:'Thmanyah Sans'; src:url('src/assets/fonts/thmanyahsans-Light.otf') format('opentype'); font-weight:300; font-display:swap; }
+@font-face { font-family:'Thmanyah Sans'; src:url('src/assets/fonts/thmanyahsans-Regular.otf') format('opentype'); font-weight:400; font-display:swap; }
+@font-face { font-family:'Thmanyah Sans'; src:url('src/assets/fonts/thmanyahsans-Medium.otf') format('opentype'); font-weight:500; font-display:swap; }
+@font-face { font-family:'Thmanyah Sans'; src:url('src/assets/fonts/thmanyahsans-Bold.otf') format('opentype'); font-weight:700; font-display:swap; }
+@font-face { font-family:'Thmanyah Sans'; src:url('src/assets/fonts/thmanyahsans-Black.otf') format('opentype'); font-weight:900; font-display:swap; }
+@font-face { font-family:'Thmanyah Serif Display'; src:url('src/assets/fonts/thmanyahserifdisplay-Light.otf') format('opentype'); font-weight:300; font-display:swap; }
+@font-face { font-family:'Thmanyah Serif Display'; src:url('src/assets/fonts/thmanyahserifdisplay-Regular.otf') format('opentype'); font-weight:400; font-display:swap; }
+@font-face { font-family:'Thmanyah Serif Display'; src:url('src/assets/fonts/thmanyahserifdisplay-Medium.otf') format('opentype'); font-weight:500; font-display:swap; }
+@font-face { font-family:'Thmanyah Serif Display'; src:url('src/assets/fonts/thmanyahserifdisplay-Bold.otf') format('opentype'); font-weight:700; font-display:swap; }
+@font-face { font-family:'Thmanyah Serif Display'; src:url('src/assets/fonts/thmanyahserifdisplay-Black.otf') format('opentype'); font-weight:900; font-display:swap; }
+@font-face { font-family:'KOMission'; src:url('src/assets/fonts/KOMission-Black.otf') format('opentype'); font-weight:900; font-display:swap; }
+@font-face { font-family:'El Messiri'; src:url('src/assets/fonts/ElMessiri-Variable.ttf') format('truetype'); font-weight:400 700; font-display:swap; }
+
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:#f5f2e8; color:#171a1f; font-family:'Thmanyah Sans',sans-serif; padding:0 0 80px; }
+.wrap { max-width:900px; margin-inline:auto; padding-inline:24px; }
+header { padding:56px 0 8px; }
+h1 { font-family:'Thmanyah Serif Display'; font-weight:400; font-size:48px; line-height:1.2; color:#37442b; }
+.sub { margin-top:10px; font-size:15px; color:#6f675b; line-height:1.8; }
+
+.family { margin-top:56px; }
+.family-label { font-family:'Thmanyah Sans'; font-weight:700; font-size:16px; color:#4f4a42; padding:4px 0 10px; border-bottom:2px solid #37442b; margin-bottom:18px; }
+
+.wt { position:relative; padding:26px 0; border-bottom:1px solid #e4d5b8; display:grid; grid-template-columns:140px 1fr; gap:24px; align-items:baseline; }
+.wt:last-child { border-bottom:none; }
+.wt-num { font-family:'KOMission'; font-weight:900; font-size:20px; color:#a9533e; white-space:nowrap; }
+.wt-name { display:block; font-family:'Thmanyah Sans'; font-weight:400; font-size:13px; color:#6f675b; margin-top:3px; }
+
+/* حجم الهيرو */
+.sample-hero { font-size:clamp(38px,5.5vw,68px); line-height:1.2; }
+/* حجم قسم */
+.sample-h2 { font-size:clamp(28px,3.5vw,44px); line-height:1.25; }
+/* حجم بطاقة */
+.sample-h3 { font-size:clamp(20px,2.2vw,28px); line-height:1.35; }
+/* حجم نص */
+.sample-body { font-size:16px; line-height:1.85; }
+
+.active { position:absolute; top:18px; inset-inline-end:0; background:#ef6548; color:#171a1f; font-family:'Thmanyah Sans'; font-weight:700; font-size:12px; padding:3px 12px; transform:rotate(-1deg); }
+
+.compare { margin-top:64px; padding:24px; background:#efe5cf; border:1px solid #c9c0ad; }
+.compare h3 { font-family:'Thmanyah Serif Display'; font-weight:700; font-size:22px; color:#171a1f; margin-bottom:16px; }
+.compare-row { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px; }
+.compare-cell { padding:18px; background:#fdf8ec; border:1px solid #d0c6b2; }
+.compare-cell .lbl { font-family:'Thmanyah Sans'; font-weight:700; font-size:12px; color:#a9533e; margin-bottom:8px; }
+.compare-cell .txt { font-size:26px; line-height:1.3; color:#171a1f; }
+
+.picker { position:fixed; bottom:0; inset-inline:0; background:#37442b; color:#f5f2e8; padding:14px 24px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; z-index:50; }
+.picker label { font-family:'Thmanyah Sans'; font-weight:700; font-size:14px; }
+.picker select { height:40px; padding-inline:12px; border:1.5px solid #6f675b; background:#fdf8ec; font-family:'Thmanyah Sans'; font-size:14px; color:#171a1f; }
+.picker select:focus { border-color:#ef6548; outline:none; }
+.pick-note { font-size:12px; opacity:.7; }
+
+.kom { margin-top:56px; }
+.kom .sample-hero { font-family:'KOMission'; font-weight:900; font-size:clamp(34px,4.5vw,56px); line-height:1.1; }
+
+.mess { margin-top:56px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>عينة أوزان ثمانية — مدارج</h1>
+<p class="sub">كل عائلة بخمسة أوزان (300/400/500/700/900). اقرأ السطور وقارن، ثم اختر من المُنتقي أسفل الشاشة أو قل لي الرقم.</p>
+</header>
+
+<!-- ==================== ثمانية سيريف ديسبلاي ==================== -->
+<section class="family">
+<div class="family-label">ثمانية سيريف ديسبلاي — عناوين الهيرو والأقسام (سيريف)</div>
+
+<div class="wt">
+<span class="active">المستخدم حاليًا</span>
+<span class="wt-num">400<span class="wt-name">Regular</span></span>
+<div class="serif-400">
+<div class="sample-hero" style="font-family:'Thmanyah Serif Display'; font-weight:400;">الخطة تبدأ من الطفل.</div>
+<div class="sample-h2" style="font-family:'Thmanyah Serif Display'; font-weight:400; margin-top:14px; color:#4f4a42;">كل مهارة من دليل الوزارة، بعدة تدريس جاهزة.</div>
+<div class="sample-h3" style="font-family:'Thmanyah Serif Display'; font-weight:400; margin-top:14px; color:#6f675b;">أي كلمة تنتهي بتاء مربوطة؟</div>
+</div>
+</div>
+
+<div class="wt">
+<span class="wt-num">500<span class="wt-name">Medium</span></span>
+<div class="serif-500">
+<div class="sample-hero" style="font-family:'Thmanyah Serif Display'; font-weight:500;">الخطة تبدأ من الطفل.</div>
+<div class="sample-h2" style="font-family:'Thmanyah Serif Display'; font-weight:500; margin-top:14px; color:#4f4a42;">كل مهارة من دليل الوزارة، بعدة تدريس جاهزة.</div>
+<div class="sample-h3" style="font-family:'Thmanyah Serif Display'; font-weight:500; margin-top:14px; color:#6f675b;">أي كلمة تنتهي بتاء مربوطة؟</div>
+</div>
+</div>
+
+<div class="wt">
+<span class="wt-num">700<span class="wt-name">Bold</span></span>
+<div class="serif-700">
+<div class="sample-hero" style="font-family:'Thmanyah Serif Display'; font-weight:700;">الخطة تبدأ من الطفل.</div>
+<div class="sample-h2" style="font-family:'Thmanyah Serif Display'; font-weight:700; margin-top:14px; color:#4f4a42;">كل مهارة من دليل الوزارة، بعدة تدريس جاهزة.</div>
+<div class="sample-h3" style="font-family:'Thmanyah Serif Display'; font-weight:700; margin-top:14px; color:#6f675b;">أي كلمة تنتهي بتاء مربوطة؟</div>
+</div>
+</div>
+
+<div class="wt">
+<span class="wt-num">900<span class="wt-name">Black</span></span>
+<div class="serif-900">
+<div class="sample-hero" style="font-family:'Thmanyah Serif Display'; font-weight:900;">الخطة تبدأ من الطفل.</div>
+<div class="sample-h2" style="font-family:'Thmanyah Serif Display'; font-weight:900; margin-top:14px; color:#4f4a42;">كل مهارة من دليل الوزارة، بعدة تدريس جاهزة.</div>
+<div class="sample-h3" style="font-family:'Thmanyah Serif Display'; font-weight:900; margin-top:14px; color:#6f675b;">أي كلمة تنتهي بتاء مربوطة؟</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== ثمانية سنس ==================== -->
+<section class="family">
+<div class="family-label">ثمانية سنس — نص الواجهة والأزرار (سانس)</div>
+
+<div class="wt">
+<span class="wt-num">300<span class="wt-name">Light</span></span>
+<div class="sans-300">
+<div class="sample-h3" style="font-family:'Thmanyah Sans'; font-weight:300;">عبدالله يحتاج خمس دقائق هادئة قبل أن يبدأ.</div>
+<div class="sample-body" style="font-family:'Thmanyah Sans'; font-weight:300; margin-top:10px; color:#6f675b;">مسبار أسبوعي قصير يرصد تقدم الطالب، وخط يتحرك أمامك بدل الذاكرة والتقدير.</div>
+</div>
+</div>
+
+<div class="wt">
+<span class="active">المستخدم حاليًا</span>
+<span class="wt-num">400<span class="wt-name">Regular</span></span>
+<div class="sans-400">
+<div class="sample-h3" style="font-family:'Thmanyah Sans'; font-weight:400;">عبدالله يحتاج خمس دقائق هادئة قبل أن يبدأ.</div>
+<div class="sample-body" style="font-family:'Thmanyah Sans'; font-weight:400; margin-top:10px; color:#6f675b;">مسبار أسبوعي قصير يرصد تقدم الطالب، وخط يتحرك أمامك بدل الذاكرة والتقدير.</div>
+</div>
+</div>
+
+<div class="wt">
+<span class="wt-num">500<span class="wt-name">Medium</span></span>
+<div class="sans-500">
+<div class="sample-h3" style="font-family:'Thmanyah Sans'; font-weight:500;">عبدالله يحتاج خمس دقائق هادئة قبل أن يبدأ.</div>
+<div class="sample-body" style="font-family:'Thmanyah Sans'; font-weight:500; margin-top:10px; color:#6f675b;">مسبار أسبوعي قصير يرصد تقدم الطالب، وخط يتحرك أمامك بدل الذاكرة والتقدير.</div>
+</div>
+</div>
+
+<div class="wt">
+<span class="wt-num">700<span class="wt-name">Bold</span></span>
+<div class="sans-700">
+<div class="sample-h3" style="font-family:'Thmanyah Sans'; font-weight:700;">عبدالله يحتاج خمس دقائق هادئة قبل أن يبدأ.</div>
+<div class="sample-body" style="font-family:'Thmanyah Sans'; font-weight:700; margin-top:10px; color:#6f675b;">مسبار أسبوعي قصير يرصد تقدم الطالب، وخط يتحرك أمامك بدل الذاكرة والتقدير.</div>
+</div>
+</div>
+
+<div class="wt">
+<span class="wt-num">900<span class="wt-name">Black</span></span>
+<div class="sans-900">
+<div class="sample-h3" style="font-family:'Thmanyah Sans'; font-weight:900;">عبدالله يحتاج خمس دقائق هادئة قبل أن يبدأ.</div>
+<div class="sample-body" style="font-family:'Thmanyah Sans'; font-weight:900; margin-top:10px; color:#6f675b;">مسبار أسبوعي قصير يرصد تقدم الطالب، وخط يتحرك أمامك بدل الذاكرة والتقدير.</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== مقارنة أفقية ==================== -->
+<section class="compare">
+<h3>قارن جنبًا إلى جنب — نفس النص بأوزان مختلفة</h3>
+<div class="compare-row">
+<div class="compare-cell">
+<div class="lbl">سيريف 400 (الحالي)</div>
+<div class="txt" style="font-family:'Thmanyah Serif Display'; font-weight:400;">مكتبة المعايير</div>
+</div>
+<div class="compare-cell">
+<div class="lbl">سيريف 700</div>
+<div class="txt" style="font-family:'Thmanyah Serif Display'; font-weight:700;">مكتبة المعايير</div>
+</div>
+</div>
+<div class="compare-row">
+<div class="compare-cell">
+<div class="lbl">سيريف 900</div>
+<div class="txt" style="font-family:'Thmanyah Serif Display'; font-weight:900;">مكتبة المعايير</div>
+</div>
+<div class="compare-cell">
+<div class="lbl">سنس 900 (Black)</div>
+<div class="txt" style="font-family:'Thmanyah Sans'; font-weight:900;">مكتبة المعايير</div>
+</div>
+</div>
+<div class="compare-row">
+<div class="compare-cell">
+<div class="lbl">KOMission 900 (الأرقام)</div>
+<div class="txt" style="font-family:'KOMission'; font-weight:900; font-size:32px;">٣٦ / ٤٥</div>
+</div>
+<div class="compare-cell">
+<div class="lbl">El Messiri 700</div>
+<div class="txt" style="font-family:'El Messiri'; font-weight:700;">مكتبة المعايير</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== KOMission ==================== -->
+<section class="kom">
+<div class="family-label">KOMission Black — الأرقام والرموز</div>
+<div class="wt">
+<span class="wt-num">900<span class="wt-name">Black (الوحيد)</span></span>
+<div>
+<div class="sample-hero" style="font-family:'KOMission'; font-weight:900;">م ٥/١</div>
+<div class="sample-hero" style="font-family:'KOMission'; font-weight:900; font-size:44px; margin-top:10px;">٨ من ١٢</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== El Messiri ==================== -->
+<section class="mess">
+<div class="family-label">El Messiri — احتياطي العناوين (متغير ٤٠٠–٧٠٠)</div>
+<div class="wt">
+<span class="wt-num">400<span class="wt-name">Regular</span></span>
+<div class="sample-h2" style="font-family:'El Messiri'; font-weight:400;">مكتبة معايير القراءة واللغة</div>
+</div>
+<div class="wt">
+<span class="wt-num">700<span class="wt-name">Bold</span></span>
+<div class="sample-h2" style="font-family:'El Messiri'; font-weight:700;">مكتبة معايير القراءة واللغة</div>
+</div>
+</section>
+</div>
+
+<!-- ==================== المُنتقي ==================== -->
+<div class="picker">
+<label for="pick-display">وزن العناوين (سيريف ديسبلاي):</label>
+<select id="pick-display">
+<option value="300">300 Light</option>
+<option value="400" selected>400 Regular (الحالي)</option>
+<option value="500">500 Medium</option>
+<option value="700">700 Bold</option>
+<option value="900">900 Black</option>
+</select>
+<label for="pick-ui" style="margin-inline-start:14px;">وزن النص (سنس):</label>
+<select id="pick-ui">
+<option value="300">300 Light</option>
+<option value="400" selected>400 Regular (الحالي)</option>
+<option value="500">500 Medium</option>
+<option value="700">700 Bold</option>
+<option value="900">900 Black</option>
+</select>
+<span class="pick-note">التغيير هنا للمعاينة فقط — قل لي الرقم وأثبّته في الموقع.</span>
+</div>
+
+<script>
+const pickDisplay = document.getElementById('pick-display');
+const pickUI = document.getElementById('pick-ui');
+
+pickDisplay.addEventListener('change', () => {
+  const w = pickDisplay.value;
+  document.querySelectorAll('.family').forEach(f => {
+    if (f.querySelector('.family-label').textContent.includes('سيريف')) {
+      f.querySelectorAll('.wt').forEach(row => {
+        row.querySelectorAll('.sample-hero,.sample-h2,.sample-h3').forEach(el => {
+          el.style.fontWeight = w;
+        });
+      });
+    }
+  });
+});
+
+pickUI.addEventListener('change', () => {
+  const w = pickUI.value;
+  document.querySelectorAll('.family').forEach(f => {
+    if (f.querySelector('.family-label').textContent.includes('سنس')) {
+      f.querySelectorAll('.wt').forEach(row => {
+        row.querySelectorAll('.sample-h3,.sample-body').forEach(el => {
+          el.style.fontWeight = w;
+        });
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>

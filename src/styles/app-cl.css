@@ -1,0 +1,925 @@
+/* ============================================================
+   Madarij app — direction 3 shell + direction 2 measurement room
+   ============================================================ */
+
+.app {
+  --paper: #f7f0df;
+  --paper-2: #efe5cf;
+  --paper-3: #e4d5b8;
+  --white: #fdf8ec;
+  --ink: #171a1f;
+  --ink-2: #4f4a42;
+  --muted: #6f675b;
+  --olive: #ef6548;
+  --olive-2: #c9472d;
+  --sage: #9bd8c0;
+  --coral: #ef6548;
+  --coral-2: #c9472d;
+  --sea: #1f4bff;
+  --sea-2: #1639d6;
+  --line: #d8c9ad;
+  --ok: #2f6b55;
+  --warn: #c9472d;
+  --shadow: 7px 7px 0 rgba(23, 26, 31, 0.14);
+  --font-display: 'Thmanyah Serif Display', 'KOMission', 'El Messiri', serif;
+  --font-ui: 'Thmanyah Sans', 'El Messiri', sans-serif;
+  --font-data: 'KOMission', 'Thmanyah Sans', sans-serif;
+  --app-blue: #2947c8;
+  --app-blue-deep: #2039a8;
+  --app-blue-ink: #1b308d;
+  --marigold: #f0b33d;
+  --mint: #9bd8c0;
+  --data-blue: #1f4bff;
+  --graph: #eef1ea;
+
+  background: var(--app-blue);
+  color: var(--ink);
+  font-family: var(--font-ui);
+}
+
+.app :focus-visible {
+  outline: 3px solid var(--marigold);
+  outline-offset: 2px;
+}
+
+/* ---------- sidebar ---------- */
+.app .app-sidebar {
+  background: var(--app-blue-deep);
+  color: var(--paper);
+  padding: 26px 16px 22px;
+}
+
+.app .side-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  width: fit-content;
+  padding: 2px 13px 7px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.15;
+  transform: rotate(-1.6deg);
+  box-shadow: 5px 5px 0 rgba(12, 20, 58, 0.28);
+}
+
+.app .side-brand small {
+  color: var(--ink-2);
+  font-family: var(--font-ui);
+  font-size: 10px;
+}
+
+.app .side-nav {
+  margin-top: 34px;
+  gap: 3px;
+}
+
+.app .side-link {
+  border-radius: 0;
+  color: rgba(247, 240, 223, 0.82);
+  font-size: 0.9em;
+}
+
+.app .side-link svg {
+  opacity: 0.9;
+}
+
+.app .side-link:hover {
+  background: rgba(247, 240, 223, 0.12);
+  color: var(--paper);
+}
+
+.app .side-link.active {
+  background: var(--coral);
+  color: var(--ink);
+  font-weight: 700;
+  box-shadow: 4px 4px 0 rgba(12, 20, 58, 0.24);
+}
+
+.app .side-foot {
+  color: rgba(247, 240, 223, 0.62);
+}
+
+.app .side-foot a {
+  color: var(--marigold);
+}
+
+/* ---------- topbar ---------- */
+.app .app-topbar {
+  background: var(--app-blue);
+  color: var(--paper);
+  border-bottom: 1px solid rgba(247, 240, 223, 0.16);
+}
+
+.app .top-title {
+  font-family: var(--font-display);
+  font-size: 1.35em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.app .scale-group {
+  background: rgba(247, 240, 223, 0.13);
+  border-radius: 0;
+}
+
+.app .scale-btn {
+  color: rgba(247, 240, 223, 0.78);
+  border-radius: 0;
+  font-family: var(--font-data);
+}
+
+.app .scale-btn.active {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.app .btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(247, 240, 223, 0.4);
+  color: var(--paper);
+}
+
+.app .btn-ghost:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.app .teacher-chip {
+  background: rgba(247, 240, 223, 0.14);
+  color: var(--paper);
+  border-radius: 0;
+}
+
+.app .teacher-chip b {
+  background: var(--marigold);
+  color: var(--ink);
+  border-radius: 50%;
+}
+
+.app .menu-btn {
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 0;
+}
+
+/* ---------- paper sheet ---------- */
+.app .app-content {
+  position: relative;
+  width: calc(100% - 48px);
+  max-width: 1320px;
+  margin: 18px auto 38px;
+  padding: 30px 30px 44px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 10px 10px 0 rgba(12, 20, 58, 0.3);
+}
+
+.app .app-content::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  inset-inline-start: 50%;
+  width: 96px;
+  height: 24px;
+  margin-inline-start: -48px;
+  background: rgba(240, 179, 61, 0.72);
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+.app .page-head {
+  margin-bottom: 24px;
+}
+
+.app .page-title {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 2.15em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.app .page-sub {
+  color: var(--ink-2);
+  font-size: 0.88em;
+}
+
+.app .page-actions .btn {
+  box-shadow: 4px 4px 0 rgba(23, 26, 31, 0.14);
+}
+
+/* ---------- buttons ---------- */
+.app .btn {
+  border-radius: 0;
+  border: 0;
+  font-weight: 700;
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.app .btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.app .btn-primary {
+  background: var(--coral);
+  color: var(--ink);
+  box-shadow: 4px 4px 0 rgba(23, 26, 31, 0.16);
+}
+
+.app .btn-primary:hover {
+  background: #f47c63;
+}
+
+.app .btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  box-shadow: none;
+}
+
+.app .btn-ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.app .btn-danger {
+  background: transparent;
+  color: var(--coral-2);
+  border: 1.5px solid var(--coral-2);
+}
+
+.app .btn-danger:hover {
+  background: var(--coral);
+  color: var(--ink);
+}
+
+.app .btn-sm {
+  min-height: 34px;
+  padding: 6px 12px;
+  font-size: 0.8em;
+}
+
+/* ---------- stats ---------- */
+.app .stats {
+  background: var(--ink);
+  box-shadow: 6px 6px 0 rgba(23, 26, 31, 0.16);
+  margin-bottom: 24px;
+}
+
+.app .stat {
+  padding: 20px 22px;
+}
+
+.app .stat + .stat {
+  border-inline-start: 1px solid rgba(247, 240, 223, 0.16);
+}
+
+.app .stat-value {
+  color: var(--marigold);
+  font-family: var(--font-data);
+  font-size: 2.15em;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.app .stat-label {
+  color: rgba(247, 240, 223, 0.68);
+  font-size: 0.76em;
+}
+
+/* ---------- panels ---------- */
+.app .panel {
+  background: #fdf8ec;
+  border: 1px solid #c9c0ad;
+  box-shadow: 5px 5px 0 rgba(23, 26, 31, 0.12);
+}
+
+.app .panel-head {
+  padding: 11px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom: 0;
+}
+
+.app .panel-title {
+  color: var(--paper);
+  font-size: 0.92em;
+  font-weight: 700;
+}
+
+.app .panel-head .chip {
+  background: rgba(247, 240, 223, 0.14);
+  color: var(--paper);
+}
+
+.app .panel-head .chip-olive {
+  background: var(--mint);
+  color: var(--ink);
+}
+
+.app .panel-head .chip-coral {
+  background: var(--coral);
+  color: var(--ink);
+}
+
+.app .panel-head .chip-sea {
+  background: var(--data-blue);
+  color: var(--paper);
+}
+
+.app .panel-head .btn-ghost {
+  color: var(--paper);
+  border-color: rgba(247, 240, 223, 0.4);
+}
+
+.app .panel-head .btn-ghost:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.app .panel-body {
+  background: #fdf8ec;
+}
+
+/* ---------- chips ---------- */
+.app .chip {
+  border-radius: 0;
+  background: #e9dfca;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.app .chip-coral {
+  background: #f6c9bd;
+  color: #7a2d1c;
+}
+
+.app .chip-olive {
+  background: var(--mint);
+  color: var(--ink);
+}
+
+.app .chip-sea {
+  background: #d7e0ff;
+  color: #1639a8;
+}
+
+.app .chip-sand {
+  background: #e9dfca;
+  color: var(--ink-2);
+}
+
+/* ---------- tables ---------- */
+.app .table {
+  font-size: 0.84em;
+}
+
+.app .table th {
+  padding: 9px 13px;
+  background: #e6dcc8;
+  color: var(--ink);
+  font-weight: 700;
+  border-bottom: 1px solid #c9c0ad;
+}
+
+.app .table td {
+  border-bottom: 1px solid #e4dac6;
+  color: var(--ink);
+}
+
+.app .table tbody tr:hover {
+  background: var(--graph);
+}
+
+.app .table .num {
+  font-family: var(--font-data);
+  font-weight: 500;
+}
+
+.app .delta.up {
+  color: var(--ok);
+}
+
+.app .delta.down {
+  color: var(--coral-2);
+}
+
+.app .delta.flat {
+  color: var(--muted);
+}
+
+.app .progress {
+  background: rgba(23, 26, 31, 0.14);
+}
+
+.app .progress span {
+  background: var(--data-blue);
+}
+
+/* ---------- student file ---------- */
+.app .student-head {
+  background: var(--paper-2);
+  border: 1px solid #c9c0ad;
+  box-shadow: 4px 4px 0 rgba(23, 26, 31, 0.1);
+}
+
+.app .student-head h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+
+.app .student-meta {
+  color: var(--ink-2);
+}
+
+.app .student-note {
+  color: var(--ink-2);
+}
+
+.app .tabs {
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.app .tab {
+  color: var(--ink-2);
+  border-bottom: 3px solid transparent;
+}
+
+.app .tab:hover {
+  color: var(--ink);
+}
+
+.app .tab.active {
+  color: var(--ink);
+  border-bottom-color: var(--coral);
+  font-weight: 700;
+}
+
+.app .goal-card {
+  background: #fdf8ec;
+  border: 1px solid #d0c6b2;
+  box-shadow: 4px 4px 0 rgba(23, 26, 31, 0.1);
+}
+
+.app .goal-domain {
+  color: var(--coral-2);
+  font-weight: 700;
+}
+
+.app .goal-card h3 {
+  font-weight: 700;
+}
+
+.app .goal-statement,
+.app .goal-meta {
+  color: var(--ink-2);
+}
+
+.app .info-item {
+  border-bottom: 1px solid #e0d5c0;
+}
+
+.app .info-item span:first-child {
+  color: var(--ink-2);
+}
+
+/* ---------- forms / plan ---------- */
+.app .field label {
+  color: var(--ink-2);
+  font-weight: 700;
+}
+
+.app .field select,
+.app .field input,
+.app .field textarea,
+.app .panel-body textarea,
+.app .panel-body input[type='date'] {
+  background: #ffffff;
+  border: 1px solid #b9c4b7;
+  border-radius: 0;
+  color: var(--ink);
+}
+
+.app .field select:focus,
+.app .field input:focus,
+.app .field textarea:focus {
+  border-color: var(--data-blue);
+  outline: 2px solid rgba(31, 75, 255, 0.16);
+  outline-offset: 0;
+}
+
+.app .panel-body > textarea,
+.app .panel-body .field textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.9em;
+  line-height: 1.8;
+}
+
+/* ---------- probe ---------- */
+.app .probe-start {
+  background: var(--paper-2);
+  border: 1px solid #c9c0ad;
+  box-shadow: 5px 5px 0 rgba(23, 26, 31, 0.12);
+}
+
+.app .probe-start h2 {
+  font-family: var(--font-display);
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+.app .probe-instructions {
+  color: var(--ink-2);
+}
+
+.app .probe-instructions ol {
+  color: var(--ink-2);
+}
+
+.app .probe-timer {
+  font-family: var(--font-data);
+  font-size: 3.4em;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.app .probe-passage {
+  background: #fdf8ec;
+  border: 1px solid #c9c0ad;
+  font-family: 'Amiri', serif;
+  font-size: 1.32em;
+  color: var(--ink);
+}
+
+.app .tally-btn {
+  border-radius: 0;
+  box-shadow: 5px 5px 0 rgba(23, 26, 31, 0.16);
+}
+
+.app .tally-good {
+  background: var(--data-blue);
+  color: #ffffff;
+}
+
+.app .tally-good:hover {
+  background: var(--sea-2);
+}
+
+.app .tally-bad {
+  background: var(--coral);
+  color: var(--ink);
+}
+
+.app .tally-bad:hover {
+  background: var(--coral-2);
+  color: var(--paper);
+}
+
+.app .probe-result-value {
+  font-family: var(--font-data);
+  font-size: 4.4em;
+  font-weight: 500;
+  color: var(--data-blue);
+}
+
+.app .probe-summary b {
+  font-family: var(--font-data);
+  font-weight: 500;
+}
+
+/* ---------- activities ---------- */
+.app .activity-grid {
+  gap: 20px;
+}
+
+.app .activity-card {
+  position: relative;
+  background: #fdf8ec;
+  border: 1px solid #d0c6b2;
+  box-shadow: 6px 6px 0 rgba(23, 26, 31, 0.14);
+  transform: rotate(-0.5deg);
+}
+
+.app .activity-card:nth-child(2) {
+  transform: rotate(0.6deg);
+}
+
+.app .activity-card:nth-child(3) {
+  transform: rotate(0.4deg);
+}
+
+.app .activity-card:nth-child(4) {
+  transform: rotate(-0.7deg);
+}
+
+.app .activity-card::before {
+  content: '';
+  position: absolute;
+  top: -9px;
+  inset-inline-start: 26px;
+  width: 58px;
+  height: 18px;
+  background: rgba(240, 179, 61, 0.7);
+  transform: rotate(-3deg);
+}
+
+.app .activity-card:nth-child(even)::before {
+  background: rgba(155, 216, 192, 0.9);
+}
+
+.app .activity-visual {
+  background: var(--mint);
+  color: var(--ink);
+  border: 1px solid rgba(23, 26, 31, 0.12);
+  font-family: var(--font-display);
+}
+
+.app .activity-card:nth-child(2) .activity-visual {
+  background: var(--marigold);
+}
+
+.app .activity-card:nth-child(3) .activity-visual {
+  background: var(--peach, #f3c9ad);
+}
+
+.app .activity-card:nth-child(4) .activity-visual {
+  background: #d7e0ff;
+}
+
+.app .activity-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.45em;
+  font-weight: 700;
+}
+
+.app .activity-card p {
+  color: var(--ink-2);
+}
+
+.app .activity-player {
+  background: var(--paper);
+  border: 1px solid #c9c0ad;
+  box-shadow: 8px 8px 0 rgba(23, 26, 31, 0.16);
+}
+
+.app .activity-counter {
+  font-family: var(--font-data);
+  color: var(--ink-2);
+}
+
+.app .activity-prompt {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.app .activity-passage {
+  background: #fdf8ec;
+  border: 1px solid #d0c6b2;
+  font-family: 'Amiri', serif;
+  color: var(--ink);
+}
+
+.app .activity-option {
+  background: #fdf8ec;
+  border: 1.5px solid #c9c0ad;
+  color: var(--ink);
+}
+
+.app .activity-option:hover:not(:disabled) {
+  border-color: var(--ink);
+  background: #ffffff;
+}
+
+.app .activity-option.correct {
+  background: var(--mint);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.app .activity-option.wrong {
+  background: var(--coral);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.app .activity-progress span {
+  background: #e4dac6;
+}
+
+.app .activity-progress span.done {
+  background: var(--data-blue);
+}
+
+.app .activity-progress span.now {
+  background: var(--coral);
+}
+
+/* ---------- feedback ---------- */
+.app .feedback-fab {
+  background: var(--coral);
+  color: var(--ink);
+  border-radius: 0;
+  box-shadow: 5px 5px 0 rgba(23, 26, 31, 0.22);
+  font-weight: 700;
+}
+
+.app .feedback-fab:hover {
+  background: var(--marigold);
+}
+
+.app .feedback-fab b {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.app .feedback-panel {
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 10px 10px 0 rgba(23, 26, 31, 0.2);
+}
+
+.app .feedback-panel h3 {
+  font-family: var(--font-display);
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.app .mood-btn {
+  background: #fdf8ec;
+  border: 1.5px solid #c9c0ad;
+  border-radius: 0;
+  color: var(--ink);
+}
+
+.app .mood-btn.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.app .feedback-panel textarea,
+.app .feedback-panel input {
+  background: #ffffff;
+  border: 1px solid #b9c4b7;
+  border-radius: 0;
+}
+
+.app .toast {
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: 5px 5px 0 rgba(23, 26, 31, 0.2);
+}
+
+/* ---------- report ---------- */
+.app .report-sheet {
+  background: #fffdf7;
+  border: 1px solid #c9c0ad;
+  box-shadow: 6px 6px 0 rgba(23, 26, 31, 0.12);
+}
+
+.app .report-head {
+  border-bottom-color: var(--ink);
+}
+
+.app .report-head .brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.app .report-meta {
+  border-bottom-color: #d8c9ad;
+}
+
+.app .report-section h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.app .report-goal {
+  background: var(--paper-2);
+}
+
+.app .report-sign {
+  border-top-color: #d8c9ad;
+}
+
+.app .report-sign span {
+  border-bottom-color: var(--ink);
+}
+
+/* ---------- guide ---------- */
+.app .guide-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--coral-2);
+}
+
+.app .guide-step {
+  border-bottom: 1px solid #e0d5c0;
+}
+
+/* topbar ghost stays legible on cobalt */
+.app .app-topbar .btn-ghost {
+  background: var(--paper);
+  color: var(--ink);
+  border: 0;
+}
+
+.app .app-topbar .btn-ghost:hover {
+  background: var(--marigold);
+  color: var(--ink);
+}
+
+/* ---------- mobile ---------- */
+@media (max-width: 920px) {
+  .app .app-content {
+    width: calc(100% - 24px);
+    margin: 12px auto 28px;
+    padding: 22px 18px 34px;
+    box-shadow: 6px 6px 0 rgba(12, 20, 58, 0.28);
+  }
+
+  .app .app-sidebar {
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .app .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .app .activity-card {
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .app .app-content {
+    width: calc(100% - 16px);
+    margin: 8px auto 24px;
+    padding: 18px 14px 92px;
+  }
+
+  .app .page-title {
+    font-size: 1.8em;
+  }
+
+  .app .panel-head {
+    padding: 10px 12px;
+  }
+
+  .app .table th,
+  .app .table td {
+    padding: 9px 7px;
+  }
+
+  .app .probe-timer {
+    font-size: 2.8em;
+  }
+
+  .app .probe-result-value {
+    font-size: 3.4em;
+  }
+}
+
+@media print {
+  .app {
+    background: #ffffff !important;
+  }
+
+  .app .app-content {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    background: #ffffff;
+  }
+
+  .app .app-content::before {
+    display: none;
+  }
+
+  .app .report-sheet {
+    box-shadow: none;
+    background: #ffffff;
+    padding-bottom: 8mm;
+  }
+
+  .app .report-section {
+    margin-top: 12px;
+  }
+
+  .app .report-section .chart-svg {
+    height: 150px;
+  }
+
+  .app .report-sign {
+    margin-top: 16px;
+    padding-top: 6px;
+  }
+}

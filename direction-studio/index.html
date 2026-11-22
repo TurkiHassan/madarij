@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>مدارج · خمسة اتجاهات بصرية</title>
+  <meta name="description" content="خمسة اتجاهات بصرية كاملة لمنصة مدارج: الصفحة التعريفية وشاشة من التطبيق في كل اتجاه.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23101110'/%3E%3Ccircle cx='20' cy='43' r='5' fill='%23f4c430'/%3E%3Ccircle cx='44' cy='21' r='5' fill='%23f4c430'/%3E%3Cpath d='M20 43h14a11 11 0 0 0 0-22h-4' fill='none' stroke='%23f4c430' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;700&family=Readex+Pro:wght@300;400;500;600;700&family=Rakkas&family=Almarai:wght@300;400;700;800&family=Amiri:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/nb.css">
+  <link rel="stylesheet" href="styles/lab.css">
+  <link rel="stylesheet" href="styles/cl.css">
+  <link rel="stylesheet" href="styles/obs.css">
+  <link rel="stylesheet" href="styles/wf.css">
+  <noscript>
+    <style>
+      .world[hidden] { display: block !important; }
+      .studio-tabs, .studio-choose, .studio-progress { display: none; }
+      main { padding-top: 0; }
+    </style>
+  </noscript>
+</head>
+<body>
+
+<a class="skip-link" href="#top">تجاوز إلى المحتوى</a>
+
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+  <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-d" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l5 5 10-11"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.1 7.4L21.5 12l-7.4 2.1L12 21.5l-2.1-7.4L2.5 12l7.4-2.1L12 2.5z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5.5l3.5 2"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="5.5" cy="17" r="2"/><circle cx="18.5" cy="7" r="2"/><path d="M7.5 17h5.5a3 3 0 0 0 0-6H11a3 3 0 0 1 0-6h5.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-chevron-d" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M6 21V4h11l-2 4 2 4H6"/></symbol>
+</svg>
+
+<header class="studio" id="studio">
+  <div class="studio-inner">
+    <a class="studio-brand" href="#world-nb" aria-label="مدارج · استوديو الاتجاهات">
+      <span class="studio-mark">مدارج</span>
+      <span class="studio-sub">استوديو الاتجاهات</span>
+    </a>
+
+    <div class="studio-tabs" role="tablist" aria-label="خمسة اتجاهات بصرية">
+      <button class="studio-tab is-active" id="tab-nb" role="tab" aria-selected="true" aria-controls="world-nb" data-world="nb" style="--tab-accent:#a64238;--tab-ink:#f6efe0">
+        <span class="tab-num">١</span>
+        <span class="tab-text"><span class="tab-name">دفتر المعلم</span><span class="tab-desc">ورق وخيط وحبر</span></span>
+      </button>
+      <button class="studio-tab" id="tab-lab" role="tab" aria-selected="false" aria-controls="world-lab" tabindex="-1" data-world="lab" style="--tab-accent:#1f4bff;--tab-ink:#f6f7f2">
+        <span class="tab-num">٢</span>
+        <span class="tab-text"><span class="tab-name">غرفة القياس</span><span class="tab-desc">أرقام وأدوات قياس</span></span>
+      </button>
+      <button class="studio-tab" id="tab-cl" role="tab" aria-selected="false" aria-controls="world-cl" tabindex="-1" data-world="cl" style="--tab-accent:#f0b33d;--tab-ink:#171a1f">
+        <span class="tab-num">٣</span>
+        <span class="tab-text"><span class="tab-name">ورشة الحكاية</span><span class="tab-desc">قصاصات وحكايات</span></span>
+      </button>
+      <button class="studio-tab" id="tab-obs" role="tab" aria-selected="false" aria-controls="world-obs" tabindex="-1" data-world="obs" style="--tab-accent:#c9a45c;--tab-ink:#101d20">
+        <span class="tab-num">٤</span>
+        <span class="tab-text"><span class="tab-name">مرصد الأسبوع</span><span class="tab-desc">ليل ونجوم وهدوء</span></span>
+      </button>
+      <button class="studio-tab" id="tab-wf" role="tab" aria-selected="false" aria-controls="world-wf" tabindex="-1" data-world="wf" style="--tab-accent:#f4c430;--tab-ink:#101010">
+        <span class="tab-num">٥</span>
+        <span class="tab-text"><span class="tab-name">شبكة المسار</span><span class="tab-desc">لافتات ومسارات</span></span>
+      </button>
+    </div>
+
+    <button class="studio-choose js-choose" id="choose-btn" type="button">
+      <span class="choose-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>
+      <span class="choose-label">اختيار هذا الاتجاه</span>
+    </button>
+  </div>
+  <div class="studio-progress" aria-hidden="true"><span id="progress"></span></div>
+</header>
+
+<main id="top">
+
+  <!-- ============================================================
+       1 · دفتر المعلم
+       ============================================================ -->
+  <section class="world world-nb" id="world-nb" role="tabpanel" aria-labelledby="tab-nb" data-world="nb" data-accent="#a64238" data-name="دفتر المعلم">
+
+    <div class="nb-stage">
+      <nav class="nb-nav" aria-label="تنقل دفتر المعلم">
+        <a class="nb-brand" href="#world-nb" aria-label="مدارج">
+          <span class="nb-brand-ar">مدارج</span>
+          <span class="nb-brand-sub">دفتر المعلم</span>
+        </a>
+        <div class="nb-links">
+          <a href="#nb-app">الدفتر</a>
+          <a href="#nb-app">الخطط</a>
+          <a href="#nb-app">المسبار</a>
+          <a href="#nb-app">التقارير</a>
+        </div>
+        <a class="nb-navcta" href="#nb-app">افتح النموذج <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+      </nav>
+
+      <div class="nb-desk">
+        <div class="nb-book">
+          <span class="nb-cloth" aria-hidden="true"></span>
+
+          <div class="nb-page nb-page--right">
+            <div class="nb-page-top">
+              <span>مدارج · دفتر المعلم</span>
+              <span>١٤٤٨ / ٢٠٢٦</span>
+            </div>
+            <h1 class="nb-title">الخطة تُكتب مرة،<br>وتُقاس كل أسبوع.</h1>
+            <p class="nb-lede">هدف واضح، خطة قصيرة، ونشاط واحد. ثم مسبار قراءة يخبرك، لا يخمّن، إن كانت الخطة تعمل.</p>
+            <div class="nb-actions">
+              <a class="nb-cta" href="#nb-app">افتح دفتر اليوم <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+              <a class="nb-ghost" href="#nb-app">شاهد خطة عبدالله</a>
+            </div>
+            <div class="nb-proof">
+              <span class="nb-proof-tag">نموذج تجريبي</span>
+              <span>مبني لملاحظات معلمي صعوبات التعلم</span>
+            </div>
+            <div class="nb-page-num" aria-hidden="true">١</div>
+          </div>
+
+          <div class="nb-page nb-page--left">
+            <div class="nb-plan-head">
+              <span class="nb-tab">خطة الأسبوع ٨</span>
+              <span class="nb-date">السبت ٢١ نوفمبر</span>
+            </div>
+            <h2 class="nb-student">عبدالله الحربي</h2>
+            <p class="nb-meta">الصف الثالث · أ &nbsp; الطلاقة القرائية</p>
+
+            <div class="nb-goal">
+              <span class="nb-label">الهدف</span>
+              <p>يقرأ ٤٥ كلمة صحيحة في الدقيقة، بدقة ٩٥٪، في ثلاث محاولات خلال ستة أسابيع.</p>
+            </div>
+
+            <ul class="nb-steps">
+              <li><span class="nb-box is-done"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span><span>قراءة زوجية مع المعلم · ٥ دقائق</span><em>تم</em></li>
+              <li><span class="nb-box is-done"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span><span>إعادة قراءة النص المألوف</span><em>تم</em></li>
+              <li><span class="nb-box"></span><span>مسبار «الماء سرّ الحياة» · ٦٠ ثانية</span><em>اليوم</em></li>
+            </ul>
+
+            <figure class="nb-mini">
+              <figcaption><span>الطلاقة عبر الأسابيع</span><span>٣٦ / ٤٥</span></figcaption>
+              <svg viewBox="0 0 320 92" role="img" aria-label="تقدم قراءة عبدالله من ٢٢ إلى ٣٦ كلمة في الدقيقة خلال ثمانية أسابيع">
+                <g class="nb-mini-grid">
+                  <line x1="0" y1="18" x2="320" y2="18"/><line x1="0" y1="46" x2="320" y2="46"/><line x1="0" y1="74" x2="320" y2="74"/>
+                </g>
+                <line class="nb-mini-target" x1="0" y1="10" x2="320" y2="10"/>
+                <path class="nb-mini-line" d="M6 78 L50 73 L94 75 L138 63 L182 56 L226 59 L270 43 L314 32"/>
+                <g class="nb-mini-dots">
+                  <circle cx="6" cy="78" r="2.6"/><circle cx="50" cy="73" r="2.6"/><circle cx="94" cy="75" r="2.6"/><circle cx="138" cy="63" r="2.6"/><circle cx="182" cy="56" r="2.6"/><circle cx="226" cy="59" r="2.6"/><circle cx="270" cy="43" r="2.6"/><circle cx="314" cy="32" r="3.4"/>
+                </g>
+              </svg>
+            </figure>
+
+            <p class="nb-note">«تحسّن اليوم عندما قرأ بصوت مسموع. قلّل المشتتات في أول خمس دقائق.»</p>
+            <div class="nb-sign">ملاحظة المعلم</div>
+            <div class="nb-page-num" aria-hidden="true">٢</div>
+          </div>
+
+          <div class="nb-spine" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <a class="nb-ribbon" href="#nb-app">افتح<br>الدفتر</a>
+        </div>
+
+        <div class="nb-desk-note" aria-hidden="true">مدارج · نسخة المعلم · ٢٠٢٦</div>
+      </div>
+
+      <div class="nb-scroll">
+        <span>مرّر لترى التطبيق</span>
+        <svg class="icon" aria-hidden="true"><use href="#i-arrow-d"></use></svg>
+      </div>
+    </div>
+
+    <div class="nb-app-section" id="nb-app">
+      <div class="nb-app-intro">
+        <div>
+          <h2>نفس الدفتر، لكنه يعرف ماذا بعد.</h2>
+        </div>
+        <p>يومك كله على صفحة واحدة: من يحتاج مسبارًا، من ينتظر نشاطًا، وأي خطة تحتاج مراجعة.</p>
+      </div>
+
+      <div class="nb-app">
+        <div class="nb-app-bar">
+          <div class="nb-app-tabs" role="tablist" aria-label="أقسام التطبيق">
+            <button class="nb-app-tab is-active" type="button">اليوم</button>
+            <button class="nb-app-tab" type="button">الطلاب</button>
+            <button class="nb-app-tab" type="button">الأنشطة</button>
+            <button class="nb-app-tab" type="button">التقارير</button>
+          </div>
+          <div class="nb-app-tools">
+            <span class="nb-app-date">السبت ٢١ نوفمبر</span>
+            <span class="nb-fontctl" aria-label="حجم الخط">
+              <span>ح</span>
+              <button type="button" aria-label="تصغير الخط"><svg class="icon" aria-hidden="true"><use href="#i-minus"></use></svg></button>
+              <button type="button" aria-label="تكبير الخط"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg></button>
+            </span>
+          </div>
+        </div>
+
+        <div class="nb-app-body">
+          <aside class="nb-app-side">
+            <div class="nb-side-head">
+              <span class="nb-pill">خطة نشطة</span>
+            </div>
+            <h3>عبدالله الحربي</h3>
+            <p class="nb-side-meta">الصف الثالث · أ</p>
+            <div class="nb-goal-progress">
+              <div class="nb-gp-head"><span>نحو الهدف</span><strong>٣٦ / ٤٥</strong></div>
+              <div class="nb-gp-track"><span style="width:80%"></span></div>
+              <div class="nb-gp-foot"><span>خط الأساس ٢٢</span><span>الدقة ٩٦٪</span></div>
+            </div>
+            <p class="nb-side-note">يتحسن عندما يقرأ بصوت مسموع، ويحتاج إلى تقليل المشتتات في أول خمس دقائق.</p>
+            <a class="nb-side-link" href="#nb-app">افتح الخطة كاملة <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+            <div class="nb-side-tabs">
+              <span>الأسبوع ٨</span>
+              <span>٤ جلسات هذا الشهر</span>
+            </div>
+          </aside>
+
+          <div class="nb-app-main">
+            <div class="nb-main-head">
+              <div>
+                <h3>ثلاثة طلاب، ثلاثة قرارات.</h3>
+              </div>
+              <button class="nb-add" type="button"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> ملاحظة</button>
+            </div>
+
+            <div class="nb-rows">
+              <div class="nb-row is-next">
+                <div class="nb-row-time"><span>١٠:٣٠</span><small>اليوم</small></div>
+                <div class="nb-row-main">
+                  <h4>عبدالله الحربي <span>· الطلاقة</span></h4>
+                  <p>مسبار «الماء سرّ الحياة» · ٦٠ ثانية. آخر قراءة ٣٦ كلمة/دقيقة.</p>
+                </div>
+                <div class="nb-row-state"><span class="nb-state is-hot">مسبار اليوم</span><a href="#nb-app">سجّل <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a></div>
+              </div>
+
+              <div class="nb-row">
+                <div class="nb-row-time"><span>١١:١٥</span><small>نشاط</small></div>
+                <div class="nb-row-main">
+                  <h4>نورة القحطاني <span>· التاء المربوطة</span></h4>
+                  <p>نشاط فرز الكلمات. آخر محاولة: ٤ من ٦.</p>
+                </div>
+                <div class="nb-row-state"><span class="nb-state">نشاط قصير</span><a href="#nb-app">افتح <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a></div>
+              </div>
+
+              <div class="nb-row">
+                <div class="nb-row-time"><span>غدًا</span><small>مراجعة</small></div>
+                <div class="nb-row-main">
+                  <h4>سلمان العتيبي <span>· الفهم القرائي</span></h4>
+                  <p>مراجعة هدف الأسبوع قبل تقرير ولي الأمر.</p>
+                </div>
+                <div class="nb-row-state"><span class="nb-state">يحتاج مراجعة</span><a href="#nb-app">راجع <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a></div>
+              </div>
+            </div>
+
+            <div class="nb-main-foot">
+              <p><span>ملاحظة اليوم</span> «أضف نشاطًا قصيرًا للتاء المربوطة لنورة في الحصة القادمة.»</p>
+              <a href="#nb-app">تقرير ولي الأمر <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nb-app-page-edge" aria-hidden="true"></div>
+      </div>
+
+      <p class="nb-app-caption"><span>معاينة تصميمية.</span> البيانات تجريبية، والواجهة تعرض شكل الاتجاه لا وظيفة منتج نهائي.</p>
+    </div>
+
+    <footer class="nb-foot">
+      <div class="nb-colophon">
+        <h2>الورق يصنع الثقة.</h2>
+        <p class="nb-foot-kicker">الاتجاه ١ · دفتر المعلم</p>
+        <p class="nb-foot-copy">دفتر مفتوح على مكتب المعلم: خطة على صفحة، ومسبار على الأخرى. التطبيق يحتفظ بالملمس نفسه، لكنه يحسب ويذكّر ويرتّب.</p>
+        <div class="nb-spec">
+          <div class="nb-spec-group">
+            <span>اللوحة</span>
+            <div class="nb-swatches">
+              <i style="--c:#23261b" title="#23261B"></i><i style="--c:#3f4630" title="#3F4630"></i><i style="--c:#f3ecd9" title="#F3ECD9"></i><i style="--c:#8f2f2a" title="#8F2F2A"></i><i style="--c:#c8a55a" title="#C8A55A"></i>
+            </div>
+          </div>
+          <div class="nb-spec-group"><span>الخطوط</span><strong>عارف رقعة · نوتو نسخ عربي</strong></div>
+          <div class="nb-spec-group"><span>الشاشة</span><strong>لوحة اليوم + ملف طالب</strong></div>
+        </div>
+        <div class="nb-foot-actions">
+          <button class="nb-choose js-choose" type="button" data-choose="nb">اختيار هذا الاتجاه <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button>
+          <button class="nb-next js-next" type="button">التالي: غرفة القياس <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></button>
+        </div>
+      </div>
+      <div class="nb-foot-side" aria-hidden="true">
+        <div class="nb-foot-card">
+          <span class="nb-foot-card-top">مدارج</span>
+          <span class="nb-foot-card-title">دفتر<br>المعلم</span>
+          <span class="nb-foot-card-line"></span>
+          <span class="nb-foot-card-meta">الخطة · المسبار · التقرير</span>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ============================================================
+       2 · غرفة القياس
+       ============================================================ -->
+  <section class="world world-lab" id="world-lab" role="tabpanel" aria-labelledby="tab-lab" data-world="lab" data-accent="#1f4bff" data-name="غرفة القياس" hidden>
+
+    <div class="lab-grid-bg" aria-hidden="true"></div>
+    <nav class="lab-nav" aria-label="تنقل غرفة القياس">
+      <a class="lab-brand" href="#world-lab"><span>مدارج</span><small>غرفة القياس</small></a>
+      <div class="lab-links">
+        <a href="#lab-app">المنهج</a>
+        <a href="#lab-app">المسبار</a>
+        <a href="#lab-app">القياسات</a>
+        <a href="#lab-app">التقارير</a>
+      </div>
+      <a class="lab-navcta" href="#lab-app">ابدأ القياس <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+    </nav>
+
+    <div class="lab-hero">
+      <div class="lab-ruler" aria-hidden="true">
+        <span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span><span>70</span><span>80</span><span>90</span><span>100</span>
+      </div>
+
+      <div class="lab-hero-grid">
+        <div class="lab-copy">
+          <h1 class="lab-title">لا تخمّن.<br><span class="lab-title-under">قِس.</span></h1>
+          <p class="lab-lede">مسبار قصير يحوّل إحساسك بالتقدّم إلى رقم. تعرف أين كان عبدالله، وأين صار، وهل الخطة تعمل، قبل أن يمضي شهر آخر.</p>
+          <div class="lab-actions">
+            <a class="lab-cta" href="#lab-app">شغّل مسبارًا تجريبيًا <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+            <a class="lab-ghost" href="#lab-app">كيف يعمل القياس؟</a>
+          </div>
+          <div class="lab-tags">
+            <span><i></i> قياس مباشر</span>
+            <span><i></i> خط أساس</span>
+            <span><i></i> قرار أسبوعي</span>
+          </div>
+        </div>
+
+        <figure class="lab-figure">
+          <div class="lab-panel">
+            <div class="lab-panel-top">
+              <span class="lab-specimen">عينة A-014</span>
+              <span class="lab-live"><i></i> قياس حديث</span>
+            </div>
+            <div class="lab-panel-head">
+              <div>
+                <p class="lab-name">عبدالله الحربي</p>
+                <p class="lab-meta">الصف الثالث · أ · الطلاقة القرائية</p>
+              </div>
+              <div class="lab-big">
+                <strong>36</strong>
+                <span>كلمة صحيحة / دقيقة</span>
+              </div>
+            </div>
+
+            <div class="lab-chart-wrap">
+              <div class="lab-chart-y" aria-hidden="true"><span>50</span><span>40</span><span>30</span><span>20</span></div>
+              <svg class="lab-chart" viewBox="0 0 640 280" role="img" aria-labelledby="lab-chart-title lab-chart-desc">
+                <title id="lab-chart-title">تقدم الطلاقة القرائية لعبدالله</title>
+                <desc id="lab-chart-desc">ثمانية قياسات أسبوعية من 22 إلى 36 كلمة صحيحة في الدقيقة، والهدف 45.</desc>
+                <g class="lab-gridlines">
+                  <line x1="0" y1="16" x2="640" y2="16"/><line x1="0" y1="76" x2="640" y2="76"/><line x1="0" y1="136" x2="640" y2="136"/><line x1="0" y1="196" x2="640" y2="196"/><line x1="0" y1="256" x2="640" y2="256"/>
+                  <line x1="40" y1="0" x2="40" y2="256"/><line x1="120" y1="0" x2="120" y2="256"/><line x1="200" y1="0" x2="200" y2="256"/><line x1="280" y1="0" x2="280" y2="256"/><line x1="360" y1="0" x2="360" y2="256"/><line x1="440" y1="0" x2="440" y2="256"/><line x1="520" y1="0" x2="520" y2="256"/><line x1="600" y1="0" x2="600" y2="256"/>
+                </g>
+                <line class="lab-target-line" x1="0" y1="31" x2="640" y2="31"/>
+                <text class="lab-axis-note" x="8" y="24">الهدف 45</text>
+                <path class="lab-area" d="M40 232 L120 216 L200 220 L280 184 L360 160 L440 168 L520 120 L600 100 L600 256 L40 256 Z"/>
+                <path class="lab-line" d="M40 232 L120 216 L200 220 L280 184 L360 160 L440 168 L520 120 L600 100"/>
+                <g class="lab-points">
+                  <circle cx="40" cy="232" r="3.5"/><circle cx="120" cy="216" r="3.5"/><circle cx="200" cy="220" r="3.5"/><circle cx="280" cy="184" r="3.5"/><circle cx="360" cy="160" r="3.5"/><circle cx="440" cy="168" r="3.5"/><circle cx="520" cy="120" r="3.5"/>
+                  <circle class="is-last" cx="600" cy="100" r="5.5"/><circle class="is-last-ring" cx="600" cy="100" r="11"/>
+                </g>
+                <g class="lab-x-labels">
+                  <text x="40" y="276">W1</text><text x="120" y="276">W2</text><text x="200" y="276">W3</text><text x="280" y="276">W4</text><text x="360" y="276">W5</text><text x="440" y="276">W6</text><text x="520" y="276">W7</text><text x="600" y="276">W8</text>
+                </g>
+                <g class="lab-callout">
+                  <line x1="600" y1="100" x2="546" y2="58"/>
+                  <rect x="452" y="36" width="94" height="30"/>
+                  <text x="499" y="56">36 · +14</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="lab-readouts">
+              <div><span>الدقة</span><strong>96%</strong><small>+1 عن الأسبوع الماضي</small></div>
+              <div><span>الأخطاء</span><strong>2</strong><small>من 62 كلمة</small></div>
+              <div><span>المسافة للهدف</span><strong>9</strong><small>كلمة / دقيقة</small></div>
+            </div>
+
+            <div class="lab-panel-foot">
+              <span>آخر قياس: 18 نوفمبر 2026 · نص «الماء سرّ الحياة»</span>
+              <span class="lab-stamp">نسخة تجريبية</span>
+            </div>
+          </div>
+          <figcaption class="lab-caption">كل قياس يُقارن بخط الأساس وبالهدف، لا بزميله.</figcaption>
+        </figure>
+      </div>
+
+      <div class="lab-method">
+        <span class="lab-method-title">بروتوكول القياس</span>
+        <ol>
+          <li><b>1</b><span>اقرأ 60 ثانية</span></li>
+          <li><b>2</b><span>سجّل الأخطاء</span></li>
+          <li><b>3</b><span>قارن بالأسبوع الماضي</span></li>
+          <li><b>4</b><span>عدّل خطوة واحدة في الخطة</span></li>
+        </ol>
+        <span class="lab-method-note">القياس ليس حكمًا. إنه إشارة.</span>
+      </div>
+    </div>
+
+    <div class="lab-app-section" id="lab-app">
+      <div class="lab-app-intro">
+        <div>
+          <h2>ستون ثانية. ثم رقم يغيّر الخطوة التالية.</h2>
+        </div>
+        <p>شاشة واحدة للقراءة والتسجيل والنتيجة. لا تنقل بين ثلاث أدوات لتصل إلى قرار واحد.</p>
+      </div>
+
+      <div class="lab-console">
+        <div class="lab-console-top">
+          <div class="lab-console-id">
+            <span class="lab-chip">جلسة 042</span>
+            <span class="lab-console-student">عبدالله الحربي</span>
+          </div>
+          <div class="lab-timer" aria-label="الوقت المتبقي 47 ثانية">
+            <span>00:47</span>
+            <i></i>
+          </div>
+          <div class="lab-console-actions">
+            <button class="lab-btn lab-btn--ghost" type="button">إيقاف مؤقت</button>
+            <button class="lab-btn lab-btn--solid" type="button">إنهاء الجلسة</button>
+          </div>
+        </div>
+
+        <div class="lab-console-body">
+          <div class="lab-passage">
+            <div class="lab-passage-head">
+              <span>النص · «الماء سرّ الحياة»</span>
+              <span>الكلمة 31 من 62</span>
+            </div>
+            <p class="lab-passage-text">الماءُ نِعْمَةٌ كبيرةٌ لا نَستَطيعُ العَيشَ بِدونِها. يَشرَبُ الإنسانُ الماءَ، وتَشرَبُ الحَيواناتُ، وتَحْتاجُهُ النَّباتاتُ لِتَنْمُوَ. في بِلادِنا مَصادرُ ماءٍ قَليلةٌ، لِذَلِكَ عَلَيْنا أنْ نُحافِظَ عَلَيْهِ. إغلاقُ الصُّنبورِ عِنْدَ عَدَمِ الحاجةِ، وإصلاحُ التَّسْريبِ، ورَيُّ النَّباتاتِ في الصَّباحِ، كُلُّها خُطواتٌ صَغيرةٌ تَصْنَعُ فَرْقًا كَبيرًا.</p>
+            <div class="lab-passage-legend">
+              <span><i class="is-ok"></i> صحيحة</span>
+              <span><i class="is-err"></i> خطأ مسجّل</span>
+              <span><i class="is-tip"></i> تلميح</span>
+            </div>
+          </div>
+
+          <aside class="lab-readout-panel">
+            <div class="lab-live-card">
+              <span>الدقة الآن</span>
+              <strong>96<small>%</small></strong>
+              <div class="lab-gauge" aria-hidden="true"><span style="height:96%"></span></div>
+            </div>
+            <div class="lab-live-stats">
+              <div><span>كلمة/دقيقة</span><strong>36</strong></div>
+              <div><span>أخطاء</span><strong>2</strong></div>
+              <div><span>تلميحات</span><strong>1</strong></div>
+            </div>
+            <div class="lab-error-log">
+              <span class="lab-error-title">سجل الأخطاء</span>
+              <button class="lab-error" type="button"><span>التاء المربوطة</span><q>مدرسة</q><em>1</em></button>
+              <button class="lab-error" type="button"><span>الحروف المتشابهة</span><q>صبر</q><em>1</em></button>
+              <button class="lab-error lab-error--add" type="button"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> أضف خطأ</button>
+            </div>
+            <button class="lab-save" type="button">احفظ النتيجة وحدّث الخطة <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></button>
+            <p class="lab-save-note">ستُضاف النتيجة إلى ملف عبدالله وتظهر في تقرير الأسبوع.</p>
+          </aside>
+        </div>
+
+        <div class="lab-console-foot">
+          <span>مؤقت 60 ثانية · تسجيل فوري · مقارنة تلقائية</span>
+          <span>البيانات تجريبية</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="lab-foot">
+      <div class="lab-foot-main">
+        <h2>أداة قياس، لا لوحة أرقام.</h2>
+        <p class="lab-foot-kicker">الاتجاه 2 · غرفة القياس</p>
+        <p>أزرق الإشارة، ورق بياني، ومسطرة على الحافة. كل عنصر يخدم قراءة واحدة: هل تحرّك المؤشر؟</p>
+        <div class="lab-spec">
+          <div><span>اللوحة</span><div class="lab-swatches"><i style="--c:#eef1ea"></i><i style="--c:#0e1512"></i><i style="--c:#1f4bff"></i><i style="--c:#c9f227"></i><i style="--c:#ffffff"></i></div></div>
+          <div><span>الخطوط</span><strong>Readex Pro</strong></div>
+          <div><span>الشاشة</span><strong>المسبار الأسبوعي</strong></div>
+        </div>
+        <div class="lab-foot-actions">
+          <button class="lab-choose js-choose" type="button" data-choose="lab">اختيار هذا الاتجاه <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button>
+          <button class="lab-next js-next" type="button">التالي: ورشة الحكاية <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></button>
+        </div>
+      </div>
+      <div class="lab-foot-side" aria-hidden="true">
+        <div class="lab-sticker">
+          <span>MADARIJ</span>
+          <strong>MEASURE<br>BEFORE<br>YOU PLAN</strong>
+          <span class="lab-sticker-code">A-014 / 2026</span>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ============================================================
+       3 · ورشة الحكاية
+       ============================================================ -->
+  <section class="world world-cl" id="world-cl" role="tabpanel" aria-labelledby="tab-cl" data-world="cl" data-accent="#f0b33d" data-name="ورشة الحكاية" hidden>
+
+    <div class="cl-shapes" aria-hidden="true">
+      <span class="cl-shape cl-shape--mint"></span>
+      <span class="cl-shape cl-shape--coral"></span>
+      <span class="cl-shape cl-shape--paper"></span>
+      <span class="cl-tape cl-tape--one"></span>
+      <span class="cl-tape cl-tape--two"></span>
+    </div>
+
+    <nav class="cl-nav" aria-label="تنقل ورشة الحكاية">
+      <a class="cl-brand" href="#world-cl"><span class="cl-brand-paper">مدارج</span><span class="cl-brand-sub">ورشة الحكاية</span></a>
+      <div class="cl-links">
+        <a href="#cl-app">الحكايات</a>
+        <a href="#cl-app">الخطط</a>
+        <a href="#cl-app">الأنشطة</a>
+        <a href="#cl-app">التقارير</a>
+      </div>
+      <a class="cl-navcta" href="#cl-app">افتح ملفًا <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+    </nav>
+
+    <div class="cl-hero">
+      <div class="cl-copy">
+        <h1 class="cl-title">الخطة تبدأ<br><span class="cl-title-paper">من الطفل.</span></h1>
+        <p class="cl-lede">لا من قالب جاهز. هدف من كلماته، نشاط من اهتمامه، ومسبار يخبرك إن كان الطريق يعمل. كل ذلك في ملف واحد، بلا أوراق ضائعة.</p>
+        <div class="cl-actions">
+          <a class="cl-cta" href="#cl-app">افتح ملف عبدالله <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+          <a class="cl-ghost" href="#cl-app">كيف تُبنى الخطة؟</a>
+        </div>
+        <div class="cl-footnote"><span class="cl-footnote-tape"></span> عبدالله يحب الصقور والخرائط. هذه أول جملة في خطته.</div>
+      </div>
+
+      <div class="cl-board" aria-label="لوحة خطة عبدالله">
+        <div class="cl-board-paper">
+          <span class="cl-board-tape" aria-hidden="true"></span>
+          <div class="cl-board-head">
+            <span class="cl-avatar">ع</span>
+            <div>
+              <h2>عبدالله الحربي</h2>
+              <p>الصف الثالث · أ · طلاقة قرائية</p>
+            </div>
+            <span class="cl-stamp">خطة الأسبوع ٨</span>
+          </div>
+
+          <div class="cl-goal-strip">
+            <span>الهدف</span>
+            <p>يقرأ ٤٥ كلمة صحيحة في الدقيقة، بدقة ٩٥٪، خلال ستة أسابيع.</p>
+          </div>
+
+          <div class="cl-board-grid">
+            <div class="cl-mini-card">
+              <span class="cl-mini-label">ما يعرفه عنه المعلم</span>
+              <p>يقرأ بثقة أكبر عندما يسمع صوته. يحتاج خمس دقائق هادئة قبل أن يبدأ.</p>
+              <span class="cl-chip cl-chip--mint">اهتمام: الصقور</span>
+            </div>
+            <div class="cl-mini-card cl-mini-card--progress">
+              <span class="cl-mini-label">الرحلة</span>
+              <div class="cl-dots" aria-label="ستة أسابيع، خمسة مكتملة">
+                <i class="is-done"></i><i class="is-done"></i><i class="is-done"></i><i class="is-done"></i><i class="is-done"></i><i class="is-today"></i>
+              </div>
+              <p><strong>٣٦</strong> من ٤٥ كلمة/دقيقة · الدقة ٩٦٪</p>
+            </div>
+          </div>
+
+          <figure class="cl-chart">
+            <figcaption><span>الطلاقة</span><span>آخر ٨ أسابيع</span></figcaption>
+            <svg viewBox="0 0 440 120" role="img" aria-label="تقدم عبدالله من ٢٢ إلى ٣٦ كلمة في الدقيقة">
+              <path class="cl-chart-line" d="M8 102 L68 92 L128 96 L188 76 L248 64 L308 70 L368 44 L428 30"/>
+              <g class="cl-chart-dots"><circle cx="8" cy="102" r="3"/><circle cx="68" cy="92" r="3"/><circle cx="128" cy="96" r="3"/><circle cx="188" cy="76" r="3"/><circle cx="248" cy="64" r="3"/><circle cx="308" cy="70" r="3"/><circle cx="368" cy="44" r="3"/><circle cx="428" cy="30" r="4"/></g>
+            </svg>
+          </figure>
+
+          <div class="cl-note">
+            <span class="cl-note-pin" aria-hidden="true"></span>
+            <p>«قرأ اليوم عن الصقر بثقة. ننتقل غدًا إلى الفكرة الرئيسة، لا إلى نص أطول.»</p>
+            <span>ملاحظة المعلم · الأربعاء</span>
+          </div>
+
+          <a class="cl-board-link" href="#cl-app">افتح الخطة كاملة <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+        </div>
+
+        <span class="cl-tab-sticker">ملف عبدالله</span>
+        <span class="cl-tape cl-tape--board" aria-hidden="true"></span>
+        <span class="cl-doodle" aria-hidden="true">خطوة صغيرة كل أسبوع</span>
+      </div>
+    </div>
+
+    <div class="cl-app-section" id="cl-app">
+      <div class="cl-app-intro">
+        <h2>ملف يشبه الطفل، لا نموذجًا يشبه الملفات.</h2>
+        <p>نظرة واحدة تكفي لتعرف أين وصل عبدالله، وما النشاط التالي، وماذا سيقول التقرير لأمه.</p>
+      </div>
+
+      <div class="cl-app">
+        <div class="cl-app-top">
+          <div class="cl-app-brand"><span>مدارج</span><small>ملف الطالب</small></div>
+          <div class="cl-app-tabs" role="tablist" aria-label="أقسام ملف الطالب">
+            <button class="cl-app-tab is-active" type="button">نظرة عامة</button>
+            <button class="cl-app-tab" type="button">الخطة</button>
+            <button class="cl-app-tab" type="button">التقدم</button>
+            <button class="cl-app-tab" type="button">التقرير</button>
+          </div>
+          <button class="cl-app-new" type="button"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> ملاحظة</button>
+        </div>
+
+        <div class="cl-app-body">
+          <aside class="cl-profile">
+            <span class="cl-profile-avatar">ع</span>
+            <h3>عبدالله الحربي</h3>
+            <p>الصف الثالث · أ</p>
+            <span class="cl-profile-status">خطة نشطة · الأسبوع ٨</span>
+            <dl>
+              <div><dt>خط الأساس</dt><dd>٢٢</dd></div>
+              <div><dt>اليوم</dt><dd>٣٦</dd></div>
+              <div><dt>الدقة</dt><dd>٩٦٪</dd></div>
+              <div><dt>الأخطاء</dt><dd>٢</dd></div>
+            </dl>
+            <div class="cl-profile-note">
+              <span>ملاحظة ثابتة</span>
+              <p>يحتاج خمس دقائق هادئة قبل البدء. يحب القراءة عن الصقور.</p>
+            </div>
+          </aside>
+
+          <div class="cl-main">
+            <div class="cl-main-head">
+              <div>
+                <span class="cl-mini-label">الهدف الحالي</span>
+                <h3>يقرأ ٤٥ كلمة صحيحة في الدقيقة، بدقة ٩٥٪.</h3>
+              </div>
+              <span class="cl-goal-state">قيد التقدم</span>
+            </div>
+
+            <div class="cl-main-grid">
+              <section class="cl-panel cl-panel--chart">
+                <div class="cl-panel-head"><h4>التقدم الأسبوعي</h4><span>٨ قياسات</span></div>
+                <svg class="cl-app-chart" viewBox="0 0 520 180" role="img" aria-label="خط تقدم الطلاقة من ٢٢ إلى ٣٦">
+                  <g class="cl-app-grid"><line x1="0" y1="30" x2="520" y2="30"/><line x1="0" y1="80" x2="520" y2="80"/><line x1="0" y1="130" x2="520" y2="130"/></g>
+                  <line class="cl-app-target" x1="0" y1="18" x2="520" y2="18"/>
+                  <path class="cl-app-line" d="M10 150 L86 136 L162 140 L238 112 L314 96 L390 104 L466 66 L510 52"/>
+                  <g class="cl-app-dots"><circle cx="10" cy="150" r="3.5"/><circle cx="86" cy="136" r="3.5"/><circle cx="162" cy="140" r="3.5"/><circle cx="238" cy="112" r="3.5"/><circle cx="314" cy="96" r="3.5"/><circle cx="390" cy="104" r="3.5"/><circle cx="466" cy="66" r="3.5"/><circle cx="510" cy="52" r="5"/></g>
+                </svg>
+                <div class="cl-panel-foot"><span>خط الأساس ٢٢</span><span>الهدف ٤٥</span><strong>اليوم ٣٦</strong></div>
+              </section>
+
+              <section class="cl-panel cl-panel--activity">
+                <div class="cl-panel-head"><h4>النشاط التالي</h4><span class="cl-chip cl-chip--coral">٦ دقائق</span></div>
+                <p class="cl-activity-title">الفكرة الرئيسة · نص «الصقر»</p>
+                <p>ثلاث جمل، وسؤال واحد: أي جملة تحمل الفكرة الرئيسة؟</p>
+                <div class="cl-options">
+                  <span>١ · الصقر طائر سريع.</span>
+                  <span class="is-correct">٢ · الصقر يحتاج إلى مساحة واسعة ليصيد.</span>
+                  <span>٣ · الصقور تعيش في الجبال.</span>
+                </div>
+                <button class="cl-activity-btn" type="button">ابدأ النشاط <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></button>
+              </section>
+
+              <section class="cl-panel cl-panel--report">
+                <div class="cl-panel-head"><h4>تقرير ولي الأمر</h4><span>نوفمبر</span></div>
+                <p>جاهز للمشاركة: ما تحسّن، وما نعمل عليه الآن، وكيف تساعد في البيت.</p>
+                <a href="#cl-app">افتح التقرير <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+              </section>
+
+              <div class="cl-sticky">
+                <span class="cl-sticky-pin" aria-hidden="true"></span>
+                <p>تذكير: مسبار عبدالله يوم الأربعاء. النص المقترح «السوق القديم».</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="cl-app-caption"><span>معاينة تصميمية.</span> البيانات تجريبية، والواجهة تعرض شكل الاتجاه لا وظيفة منتج نهائي.</p>
+      </div>
+    </div>
+
+    <footer class="cl-foot">
+      <div class="cl-foot-main">
+        <h2>الدفء ليس زينة.</h2>
+        <p class="cl-foot-kicker">الاتجاه ٣ · ورشة الحكاية</p>
+        <p>ورق مقصوص، شريط لاصق، ولون يشرح. الهوية تجعل المعلم يشعر أن خلف كل رقم طفلًا له تفاصيل، من دون أن تتحول الواجهة إلى لعب.</p>
+        <div class="cl-spec">
+          <div><span>اللوحة</span><div class="cl-swatches"><i style="--c:#2947c8"></i><i style="--c:#f7f0df"></i><i style="--c:#f0b33d"></i><i style="--c:#ef6548"></i><i style="--c:#9bd8c0"></i></div></div>
+          <div><span>الخطوط</span><strong>Rakkas · Almarai</strong></div>
+          <div><span>الشاشة</span><strong>ملف الطالب</strong></div>
+        </div>
+        <div class="cl-foot-actions">
+          <button class="cl-choose js-choose" type="button" data-choose="cl">اختيار هذا الاتجاه <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button>
+          <button class="cl-next js-next" type="button">التالي: مرصد الأسبوع <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></button>
+        </div>
+      </div>
+      <div class="cl-foot-side" aria-hidden="true">
+        <div class="cl-foot-stack">
+          <span class="cl-foot-sheet cl-foot-sheet--one">خطة</span>
+          <span class="cl-foot-sheet cl-foot-sheet--two">حكاية</span>
+          <span class="cl-foot-sheet cl-foot-sheet--three">تقدّم</span>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ============================================================
+       4 · مرصد الأسبوع
+       ============================================================ -->
+  <section class="world world-obs" id="world-obs" role="tabpanel" aria-labelledby="tab-obs" data-world="obs" data-accent="#c9a45c" data-name="مرصد الأسبوع" hidden>
+
+    <div class="obs-sky" aria-hidden="true">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+        <g class="obs-sky-lines">
+          <circle cx="1040" cy="420" r="330"/><circle cx="1040" cy="420" r="250"/><circle cx="1040" cy="420" r="170"/>
+          <line x1="640" y1="0" x2="640" y2="900"/><line x1="0" y1="420" x2="1440" y2="420"/>
+        </g>
+        <g class="obs-sky-stars">
+          <circle cx="130" cy="120" r="1.5"/><circle cx="240" cy="300" r="1"/><circle cx="420" cy="160" r="1.5"/><circle cx="520" cy="360" r="1"/><circle cx="720" cy="120" r="1"/><circle cx="820" cy="260" r="1.5"/><circle cx="930" cy="160" r="1"/><circle cx="1130" cy="120" r="1.5"/><circle cx="1260" cy="300" r="1"/><circle cx="1340" cy="180" r="1.5"/><circle cx="160" cy="560" r="1"/><circle cx="300" cy="700" r="1.5"/><circle cx="460" cy="600" r="1"/><circle cx="620" cy="760" r="1.5"/><circle cx="780" cy="600" r="1"/><circle cx="1240" cy="700" r="1.5"/><circle cx="1360" cy="560" r="1"/><circle cx="900" cy="800" r="1"/><circle cx="1040" cy="740" r="1.5"/><circle cx="180" cy="820" r="1"/>
+        </g>
+      </svg>
+    </div>
+
+    <nav class="obs-nav" aria-label="تنقل مرصد الأسبوع">
+      <a class="obs-brand" href="#world-obs"><span>مدارج</span><small>مرصد الأسبوع</small></a>
+      <div class="obs-links">
+        <a href="#obs-app">المرصد</a>
+        <a href="#obs-app">السجل</a>
+        <a href="#obs-app">التقارير</a>
+      </div>
+      <a class="obs-navcta" href="#obs-app">ادخل المرصد <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+    </nav>
+
+    <div class="obs-hero">
+      <div class="obs-copy">
+        <h1 class="obs-title">التقدّم لا يحدث فجأة.<br><em>إنه يظهر كل أسبوع.</em></h1>
+        <p class="obs-lede">بعض التحسّن لا تراه الحصة الواحدة. مسبار هادئ كل أسبوع يرسم المسار كاملًا، حتى تعرف أي نجمة أضفتها هذه المرة.</p>
+        <div class="obs-actions">
+          <a class="obs-cta" href="#obs-app">افتح مرصد عبدالله <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+          <a class="obs-ghost" href="#obs-app">كيف يُقرأ السجل؟</a>
+        </div>
+        <dl class="obs-facts">
+          <div><dt>خط الأساس</dt><dd>٢٢</dd></div>
+          <div><dt>آخر قياس</dt><dd>٣٦</dd></div>
+          <div><dt>الأسبوع</dt><dd>٨</dd></div>
+          <div><dt>الهدف</dt><dd>٤٥</dd></div>
+        </dl>
+      </div>
+
+      <figure class="obs-figure">
+        <svg class="obs-chart" viewBox="0 0 620 620" role="img" aria-labelledby="obs-title obs-desc">
+          <title id="obs-title">مسار عبدالله الأسبوعي</title>
+          <desc id="obs-desc">ثماني نقاط قياس من ٢٢ إلى ٣٦ كلمة في الدقيقة على مدار ثمانية أسابيع، والهدف ٤٥.</desc>
+          <g class="obs-ring">
+            <circle cx="310" cy="310" r="288"/>
+            <circle cx="310" cy="310" r="236"/>
+            <circle cx="310" cy="310" r="150"/>
+            <circle cx="310" cy="310" r="86"/>
+          </g>
+          <g class="obs-ticks" aria-hidden="true">
+            <line x1="310" y1="16" x2="310" y2="38"/><line x1="310" y1="582" x2="310" y2="604"/><line x1="16" y1="310" x2="38" y2="310"/><line x1="582" y1="310" x2="604" y2="310"/>
+            <line x1="462" y1="36" x2="451" y2="56"/><line x1="158" y1="36" x2="169" y2="56"/><line x1="584" y1="158" x2="564" y2="169"/><line x1="584" y1="462" x2="564" y2="451"/><line x1="462" y1="584" x2="451" y2="564"/><line x1="158" y1="584" x2="169" y2="564"/><line x1="36" y1="462" x2="56" y2="451"/><line x1="36" y1="158" x2="56" y2="169"/>
+          </g>
+          <g class="obs-week-labels">
+            <text x="390" y="82">الأسبوع ١</text><text x="530" y="150">٢</text><text x="566" y="250">٣</text><text x="568" y="330">٤</text><text x="548" y="430">٥</text><text x="480" y="520">٦</text><text x="390" y="566">٧</text><text x="300" y="590">٨</text>
+          </g>
+          <g class="obs-constellation">
+            <path class="obs-const-line" d="M430 170 L465 215 L500 245 L520 300 L540 350 L505 405 L455 450 L405 485"/>
+            <g class="obs-stars">
+              <g class="obs-star" style="--d:0ms"><circle cx="430" cy="170" r="4"/><path d="M430 156v28M416 170h28"/></g>
+              <g class="obs-star" style="--d:90ms"><circle cx="465" cy="215" r="4.5"/><path d="M465 200v30M450 215h30"/></g>
+              <g class="obs-star" style="--d:180ms"><circle cx="500" cy="245" r="5"/><path d="M500 229v32M484 245h32"/></g>
+              <g class="obs-star" style="--d:270ms"><circle cx="520" cy="300" r="5"/><path d="M520 283v34M503 300h34"/></g>
+              <g class="obs-star" style="--d:360ms"><circle cx="540" cy="350" r="6"/><path d="M540 331v38M521 350h38"/></g>
+              <g class="obs-star" style="--d:450ms"><circle cx="505" cy="405" r="6"/><path d="M505 386v38M486 405h38"/></g>
+              <g class="obs-star" style="--d:540ms"><circle cx="455" cy="450" r="6.5"/><path d="M455 430v40M435 450h40"/></g>
+              <g class="obs-star is-last" style="--d:630ms"><circle cx="405" cy="485" r="9"/><path d="M405 460v50M380 485h50"/></g>
+            </g>
+          </g>
+          <g class="obs-target-arc" aria-hidden="true"><path d="M310 74 A236 236 0 0 1 501 189"/><text x="440" y="120">الهدف</text></g>
+          <g class="obs-center">
+            <text class="obs-center-kicker" x="310" y="288">عبدالله الحربي</text>
+            <text class="obs-center-value" x="310" y="348">٣٦</text>
+            <text class="obs-center-unit" x="310" y="380">كلمة صحيحة / دقيقة</text>
+            <text class="obs-center-note" x="310" y="414">+١٤ عن خط الأساس</text>
+          </g>
+        </svg>
+        <figcaption>كل نقطة مضيئة قياس أسبوعي. الخط بينها هو الخطة، لا الحظ.</figcaption>
+      </figure>
+    </div>
+
+    <div class="obs-ribbon">
+      <span class="obs-ribbon-label">آخر ثمانية أسابيع</span>
+      <div class="obs-ribbon-track" aria-hidden="true"><span style="width:80%"></span></div>
+      <span class="obs-ribbon-values">٢٢ <i></i> ٢٤ <i></i> ٢٣ <i></i> ٢٧ <i></i> ٢٩ <i></i> ٢٨ <i></i> ٣٣ <i></i> <b>٣٦</b></span>
+      <span class="obs-ribbon-note">آخر قياس: ١٨ نوفمبر</span>
+    </div>
+
+    <div class="obs-app-section" id="obs-app">
+      <div class="obs-app-intro">
+        <div>
+          <h2>ليلة واحدة لترى أسبوعًا كاملًا.</h2>
+        </div>
+        <p>سجل يضع القياس والملاحظة والتقرير في صفحة واحدة. هادئ بما يكفي لتقرأه بعد يوم طويل.</p>
+      </div>
+
+      <div class="obs-app">
+        <div class="obs-app-bar">
+          <div class="obs-app-brand">مدارج <span>المرصد</span></div>
+          <div class="obs-app-nav" role="tablist" aria-label="أقسام المرصد">
+            <button class="obs-app-tab is-active" type="button">اليوم</button>
+            <button class="obs-app-tab" type="button">السجل</button>
+            <button class="obs-app-tab" type="button">التقارير</button>
+          </div>
+          <span class="obs-app-date">السبت ٢١ نوفمبر ٢٠٢٦</span>
+        </div>
+
+        <div class="obs-app-body">
+          <aside class="obs-list">
+            <div class="obs-list-head"><span>الطلاب</span><span>الاتجاه</span></div>
+            <button class="obs-student is-active" type="button">
+              <span class="obs-student-name">عبدالله الحربي<small>الطلاقة · مسبار اليوم</small></span>
+              <span class="obs-mini-spark" aria-hidden="true"><svg viewBox="0 0 80 24"><path d="M2 20 L14 17 L26 18 L38 12 L50 9 L62 11 L74 5"/></svg></span>
+              <span class="obs-student-value">٣٦</span>
+            </button>
+            <button class="obs-student" type="button">
+              <span class="obs-student-name">نورة القحطاني<small>التاء المربوطة · نشاط</small></span>
+              <span class="obs-mini-spark" aria-hidden="true"><svg viewBox="0 0 80 24"><path d="M2 16 L14 18 L26 14 L38 15 L50 10 L62 12 L74 8"/></svg></span>
+              <span class="obs-student-value">٢٤</span>
+            </button>
+            <button class="obs-student" type="button">
+              <span class="obs-student-name">سلمان العتيبي<small>الفهم القرائي · مراجعة</small></span>
+              <span class="obs-mini-spark" aria-hidden="true"><svg viewBox="0 0 80 24"><path d="M2 12 L14 10 L26 13 L38 11 L50 8 L62 9 L74 6"/></svg></span>
+              <span class="obs-student-value">١٨</span>
+            </button>
+            <div class="obs-list-foot"><span>٣ طلاب</span><span>مسباران هذا الأسبوع</span></div>
+          </aside>
+
+          <div class="obs-report">
+            <div class="obs-report-head">
+              <div>
+                <h3>خط يتشكّل، لا رقم يقفز.</h3>
+                <p class="obs-report-kicker">سجل عبدالله · الأسبوع ٨</p>
+              </div>
+              <button class="obs-report-btn" type="button">تقرير ولي الأمر <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></button>
+            </div>
+
+            <div class="obs-report-grid">
+              <figure class="obs-report-chart">
+                <svg viewBox="0 0 520 300" role="img" aria-label="مسار عبدالله من ٢٢ إلى ٣٦ كلمة في الدقيقة">
+                  <g class="obs-report-gridlines"><line x1="30" y1="30" x2="500" y2="30"/><line x1="30" y1="90" x2="500" y2="90"/><line x1="30" y1="150" x2="500" y2="150"/><line x1="30" y1="210" x2="500" y2="210"/><line x1="30" y1="270" x2="500" y2="270"/><line x1="30" y1="30" x2="30" y2="270"/><line x1="97" y1="30" x2="97" y2="270"/><line x1="164" y1="30" x2="164" y2="270"/><line x1="231" y1="30" x2="231" y2="270"/><line x1="298" y1="30" x2="298" y2="270"/><line x1="365" y1="30" x2="365" y2="270"/><line x1="432" y1="30" x2="432" y2="270"/><line x1="499" y1="30" x2="499" y2="270"/></g>
+                  <line class="obs-report-target" x1="30" y1="45" x2="500" y2="45"/>
+                  <text class="obs-report-target-label" x="36" y="38">الهدف ٤٥</text>
+                  <path class="obs-report-line" d="M30 246 L97 236 L164 240 L231 210 L298 190 L365 198 L432 156 L499 138"/>
+                  <g class="obs-report-dots"><circle cx="30" cy="246" r="3"/><circle cx="97" cy="236" r="3"/><circle cx="164" cy="240" r="3"/><circle cx="231" cy="210" r="3"/><circle cx="298" cy="190" r="3"/><circle cx="365" cy="198" r="3"/><circle cx="432" cy="156" r="3"/><circle cx="499" cy="138" r="5"/></g>
+                  <g class="obs-report-axis"><text x="30" y="292">١</text><text x="97" y="292">٢</text><text x="164" y="292">٣</text><text x="231" y="292">٤</text><text x="298" y="292">٥</text><text x="365" y="292">٦</text><text x="432" y="292">٧</text><text x="499" y="292">٨</text></g>
+                </svg>
+              </figure>
+
+              <div class="obs-report-side">
+                <div class="obs-report-metric"><span>آخر قراءة</span><strong>٣٦</strong><small>كلمة صحيحة/دقيقة</small></div>
+                <div class="obs-report-metric"><span>الدقة</span><strong>٩٦٪</strong><small>+١ عن الأسبوع ٧</small></div>
+                <div class="obs-reading">
+                  <span>قراءة المرصد</span>
+                  <p>تحسّنت الطلاقة أربعة أسابيع متتالية. الأخطاء تتركز في الحروف المتشابهة، لا في السرعة.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="obs-report-foot">
+              <div><span>الخطوة التالية</span><p>نشاط «الحروف المتشابهة» قبل مسبار الأسبوع القادم.</p></div>
+              <div><span>ملاحظة</span><p>«قرأ بصوت واثق. يحتاج تلميحًا واحدًا عند كلمة غير مألوفة.»</p></div>
+              <button class="obs-report-ghost" type="button">افتح السجل كاملًا</button>
+            </div>
+          </div>
+        </div>
+        <p class="obs-app-caption"><span>معاينة تصميمية.</span> البيانات تجريبية، والواجهة تعرض شكل الاتجاه لا وظيفة منتج نهائي.</p>
+      </div>
+    </div>
+
+    <footer class="obs-foot">
+      <div class="obs-foot-main">
+        <h2>بعض التقدّم يحتاج ليلًا هادئًا.</h2>
+        <p class="obs-foot-kicker">الاتجاه ٤ · مرصد الأسبوع</p>
+        <p>خلفية داكنة، نَحاس، وخطوط محفورة. لا وهج ولا مؤثرات: الصفحة تشبه سجلًا قديمًا يفتحه المعلم في نهاية اليوم، وتقرأه العين بهدوء.</p>
+        <div class="obs-spec">
+          <div><span>اللوحة</span><div class="obs-swatches"><i style="--c:#0b1a1d"></i><i style="--c:#102629"></i><i style="--c:#e9e3d2"></i><i style="--c:#c9a45c"></i><i style="--c:#28474a"></i></div></div>
+          <div><span>الخطوط</span><strong>Amiri · Reem Kufi</strong></div>
+          <div><span>الشاشة</span><strong>سجل الأسبوع + التقرير</strong></div>
+        </div>
+        <div class="obs-foot-actions">
+          <button class="obs-choose js-choose" type="button" data-choose="obs">اختيار هذا الاتجاه <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button>
+          <button class="obs-next js-next" type="button">التالي: شبكة المسار <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></button>
+        </div>
+      </div>
+      <div class="obs-foot-side" aria-hidden="true">
+        <div class="obs-seal">
+          <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="88"/><circle cx="100" cy="100" r="70"/><path d="M100 20v160M20 100h160M43 43l114 114M157 43L43 157"/></svg>
+          <span>مدارج<br>مرصد الأسبوع</span>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ============================================================
+       5 · شبكة المسار
+       ============================================================ -->
+  <section class="world world-wf" id="world-wf" role="tabpanel" aria-labelledby="tab-wf" data-world="wf" data-accent="#f4c430" data-name="شبكة المسار" hidden>
+
+    <nav class="wf-nav" aria-label="تنقل شبكة المسار">
+      <a class="wf-brand" href="#world-wf">
+        <span class="wf-roundel">م</span>
+        <span class="wf-brand-text">مدارج <small>M-01</small></span>
+      </a>
+      <div class="wf-links">
+        <a href="#wf-app">الخط</a>
+        <a href="#wf-app">المحطات</a>
+        <a href="#wf-app">التقارير</a>
+      </div>
+      <a class="wf-navcta" href="#wf-app">لوحة اليوم <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+    </nav>
+
+    <div class="wf-hero">
+      <div class="wf-top">
+        <div class="wf-copy">
+          <h1 class="wf-title">كل طالب<br>له مسار.</h1>
+        </div>
+        <div class="wf-side">
+          <p>هدف، خطة، نشاط، مسبار، تقرير، على خط واحد لا يضيع بين الملفات. تعرف أين وصل كل طالب، وأين تقف أنت اليوم.</p>
+          <div class="wf-actions">
+            <a class="wf-cta" href="#wf-app">افتح لوحة اليوم <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+            <a class="wf-ghost" href="#wf-app">شاهد المسار كاملًا</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wf-map-wrap">
+        <div class="wf-map-head">
+          <span class="wf-map-title">الشبكة الأسبوعية</span>
+          <span class="wf-map-key"><i></i> مسار الطالب <i class="is-you"></i> أنت هنا</span>
+        </div>
+
+        <div class="wf-map" role="group" aria-label="مسار الطالب الأسبوعي">
+          <div class="wf-track" aria-hidden="true"><span class="wf-track-end"></span></div>
+          <div class="wf-stations">
+            <button class="wf-station" type="button" data-station="goal" aria-pressed="false">
+              <span class="wf-code">M-01</span>
+              <span class="wf-dot"></span>
+              <span class="wf-name">الهدف</span>
+              <span class="wf-sub">واحد وقابل للقياس</span>
+            </button>
+            <button class="wf-station" type="button" data-station="plan" aria-pressed="false">
+              <span class="wf-code">M-02</span>
+              <span class="wf-dot"></span>
+              <span class="wf-name">الخطة</span>
+              <span class="wf-sub">خطوات قصيرة</span>
+            </button>
+            <button class="wf-station" type="button" data-station="activity" aria-pressed="false">
+              <span class="wf-code">M-03</span>
+              <span class="wf-dot"></span>
+              <span class="wf-name">النشاط</span>
+              <span class="wf-sub">من اهتمام الطفل</span>
+            </button>
+            <button class="wf-station is-active" type="button" data-station="probe" aria-pressed="true">
+              <span class="wf-code">M-04</span>
+              <span class="wf-dot"></span>
+              <span class="wf-name">المسبار</span>
+              <span class="wf-sub">60 ثانية كل أسبوع</span>
+            </button>
+            <button class="wf-station" type="button" data-station="report" aria-pressed="false">
+              <span class="wf-code">M-05</span>
+              <span class="wf-dot"></span>
+              <span class="wf-name">التقرير</span>
+              <span class="wf-sub">جاهز لولي الأمر</span>
+            </button>
+          </div>
+          <div class="wf-here" id="wf-here"><span>أنت هنا</span><i></i></div>
+        </div>
+
+        <div class="wf-map-info" id="wf-info" aria-live="polite">
+          <div class="wf-info-code">M-04 <span>المسبار</span></div>
+          <p>ستون ثانية كل أسبوع: يقرأ عبدالله نصًا قصيرًا، تسجّل الأخطاء، ويظهر المعدل والدقة. هذا هو القياس الذي يخبرك إن كانت الخطة تعمل.</p>
+          <a href="#wf-app">افتح شاشة المسبار <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></a>
+        </div>
+      </div>
+
+      <div class="wf-strip" aria-hidden="true">
+        <span>الاثنين</span><span>الثلاثاء</span><span>الأربعاء</span><span>الخميس</span><span>الجمعة</span><span>السبت</span><span>الأحد</span>
+      </div>
+    </div>
+
+    <div class="wf-app-section" id="wf-app">
+      <div class="wf-app-intro">
+        <h2>لوحة إقلاع، لا جدول مهام.</h2>
+        <p>من يحتاج مسبارًا الآن، ومن ينتظر تقريرًا، وأين يقف كل مسار، في شاشة واحدة تُقرأ من نظرة.</p>
+      </div>
+
+      <div class="wf-board">
+        <div class="wf-board-head">
+          <div class="wf-board-title"><span class="wf-board-roundel">م</span><div><strong>لوحة اليوم</strong><small>السبت 21 نوفمبر 2026</small></div></div>
+          <div class="wf-board-clock"><span>10:24</span><small>آخر تحديث الآن</small></div>
+        </div>
+
+        <div class="wf-board-body">
+          <div class="wf-board-next">
+            <span class="wf-next-label">التالي</span>
+            <strong>مسبار عبدالله</strong>
+            <span class="wf-next-time">10:30</span>
+            <p>نص «الماء سرّ الحياة» · ٦٠ ثانية</p>
+            <button class="wf-next-btn" type="button">ابدأ الجلسة <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></button>
+          </div>
+
+          <div class="wf-board-table" role="table" aria-label="مسارات طلاب اليوم">
+            <div class="wf-board-row wf-board-row--head" role="row">
+              <span role="columnheader">الطالب</span><span role="columnheader">المحطة</span><span role="columnheader">التالي</span><span role="columnheader">الوقت</span><span role="columnheader">الحالة</span>
+            </div>
+            <div class="wf-board-row is-active" role="row">
+              <span class="wf-board-student" role="cell"><b>عبدالله الحربي</b><small>الصف الثالث · أ</small></span>
+              <span role="cell"><span class="wf-route r-1">M-04 المسبار</span></span>
+              <span role="cell">تقرير الأسبوع</span>
+              <span class="wf-board-time" role="cell">10:30</span>
+              <span role="cell"><span class="wf-status is-now">الآن</span></span>
+            </div>
+            <div class="wf-board-row" role="row">
+              <span class="wf-board-student" role="cell"><b>نورة القحطاني</b><small>الصف الثاني · ب</small></span>
+              <span role="cell"><span class="wf-route r-2">M-03 النشاط</span></span>
+              <span role="cell">مسبار نورة</span>
+              <span class="wf-board-time" role="cell">11:15</span>
+              <span role="cell"><span class="wf-status">قادم</span></span>
+            </div>
+            <div class="wf-board-row" role="row">
+              <span class="wf-board-student" role="cell"><b>سلمان العتيبي</b><small>الصف الثالث · ب</small></span>
+              <span role="cell"><span class="wf-route r-3">M-05 التقرير</span></span>
+              <span role="cell">مراجعة الهدف</span>
+              <span class="wf-board-time" role="cell">غدًا</span>
+              <span role="cell"><span class="wf-status is-warn">يحتاج مراجعة</span></span>
+            </div>
+            <div class="wf-board-row" role="row">
+              <span class="wf-board-student" role="cell"><b>ريم الشمري</b><small>الصف الرابع · أ</small></span>
+              <span role="cell"><span class="wf-route r-1">M-04 المسبار</span></span>
+              <span role="cell">مسبار ريم</span>
+              <span class="wf-board-time" role="cell">12:00</span>
+              <span role="cell"><span class="wf-status">قادم</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wf-board-foot">
+          <span>4 مسارات نشطة</span>
+          <span>مسباران هذا الأسبوع</span>
+          <span>تقرير واحد جاهز</span>
+          <span class="wf-board-note">بيانات تجريبية</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="wf-foot">
+      <div class="wf-foot-main">
+        <h2>الوضوح هو الهوية.</h2>
+        <p class="wf-foot-kicker">الاتجاه ٥ · شبكة المسار</p>
+        <p>أصفر إشارة، أسود، وخط سميك. نظام لافتات لمحطات العمل الأسبوعية: كل شيء في مكانه، وكل خطوة تعرف أين تذهب.</p>
+        <div class="wf-spec">
+          <div><span>اللوحة</span><div class="wf-swatches"><i style="--c:#f4c430"></i><i style="--c:#101010"></i><i style="--c:#f1efe9"></i><i style="--c:#e03a2f"></i><i style="--c:#1e56c8"></i></div></div>
+          <div><span>الخطوط</span><strong>Tajawal</strong></div>
+          <div><span>الشاشة</span><strong>لوحة اليوم</strong></div>
+        </div>
+        <div class="wf-foot-actions">
+          <button class="wf-choose js-choose" type="button" data-choose="wf">اختيار هذا الاتجاه <svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></button>
+          <button class="wf-next js-next" type="button">العودة إلى دفتر المعلم <svg class="icon" aria-hidden="true"><use href="#i-arrow-l"></use></svg></button>
+        </div>
+      </div>
+      <div class="wf-foot-side" aria-hidden="true">
+        <div class="wf-sign">
+          <span class="wf-sign-code">M-01 → M-05</span>
+          <strong>مدارج</strong>
+          <span class="wf-sign-line"></span>
+          <span class="wf-sign-note">الخط الأسبوعي</span>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+  <span class="toast-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>
+  <div class="toast-copy"><strong id="toast-title">تم الاختيار</strong><p id="toast-body">محفوظ في هذا المتصفح. غيّر الاختيار متى شئت.</p></div>
+  <button class="toast-close" id="toast-close" type="button" aria-label="إغلاق التنبيه"><svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg></button>
+  <span class="toast-progress" id="toast-progress"></span>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
